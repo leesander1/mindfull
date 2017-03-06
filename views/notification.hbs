@@ -1,0 +1,35 @@
+<div class="center-div mdl-cell mdl-grid.center-items">
+  <form method="POST" class="account-form" action="/notification/update">
+    <input type="hidden" name="email" value="{{{user.email}}}"/>
+    <h3>Get Notifications</h3>
+    <div>
+      <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="moring">
+        <input type="checkbox" id="morning" value="{{{user.notification.morning}}}" class="mdl-switch__input" checked>
+        <span class="mdl-switch__label">Moring</span>
+      </label><br/>
+    </div>
+    <div>
+      <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="evening">
+        <input type="checkbox" id="evening" value="{{{user.notification.evening}}}" class="mdl-switch__input" checked>
+        <span class="mdl-switch__label">Evening</span>
+      </label><br/>
+    </div>
+    <h3>Contact to Notify</h3>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" value="{{{user.contact.name}}}" type="text" name="name" id="name">
+      <label class="mdl-textfield__label" for="name">First Name</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" value="{{{user.contact.email}}}" name="email" id="contact_email">
+      <label class="mdl-textfield__label" for="email">Email</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" pattern="[0-9]*" value="{{{user.contact.phone}}}" name="phone" id="phone">
+      <label class="mdl-textfield__label" for="phone">Phone Number</label>
+    </div>
+    <br />
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+      Update
+    </button>
+  </form>
+</div>

@@ -1,0 +1,65 @@
+.footer {
+  color: rgb(233,30,99);
+  width: 100%;
+  /*margin: auto;*/
+  text-align: center;
+  padding-bottom: 10px;
+}
+.layout-transparent {
+  /*background: url('') center / cover;*/
+}
+.layout-transparent .mdl-layout__header,
+.layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+.center{
+  text-align:center!important;
+}
+body {
+  background-color: #EEEEEE;
+}
+.account-form{
+  text-align: center;
+}
+.mdl-textfield__input{
+  padding-top:10px;
+}
+/*
+.mdl-textfield {
+  margin-top:10px;
+  margin-bottom:20px;
+} */
+app-toolbar {
+  background:#3F51B5;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14);
+}
+.mdl-grid.center-items {
+  justify-content: center;
+  align-items: center;
+  margin: auto!important;
+}
+.vs {
+  height:85%!important;
+  width: auto!important;
+}
+.center-div {
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.card-div {
+  height: 40px;
+}
+.card-title {
+  margin:auto;
+  color: #fff!important;
+}
+.card {
+  margin: 10px;
+  padding: 16px;
+  color: #757575;
+  border-radius: 5px;
+  background-color: #FF4081;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}

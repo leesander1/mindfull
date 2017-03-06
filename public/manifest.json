@@ -1,0 +1,18 @@
+{
+  "short_name": "Sander App",
+  "name": "leesander.com",
+  "start_url": "./?utm_source=web_app_manifest",
+  "icons": [
+    {
+      "src": "images/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "rgb(233,30,99)",
+  "theme_color": "rgb(233,30,99)",
+  "display": "standalone",
+  "orientation": "portrait",
+  "gcm_sender_id": "",
+  "gcm_user_visible_only": true
+}
