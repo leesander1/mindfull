@@ -25,7 +25,7 @@ exports.postUpdateNotification = (req, res, next) => {
   const errors = req.validationErrors();
   if (errors) {
     req.flash('errors', errors);
-    //console.log(errors);
+    console.log(errors);
     return res.redirect('/notification');
   }
 

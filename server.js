@@ -35,6 +35,7 @@ const userController = require('./controllers/user');
 const notificationController = require('./controllers/notification');
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
+const entryController = require('./controllers/entry');
 
 /**
  * API keys and Passport configuration.
@@ -130,6 +131,8 @@ app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userControl
 
 app.get('/notification', notificationController.getNotification);
 app.post('/notification/update', notificationController.postUpdateNotification);
+
+app.get('/entry', entryController.newEntry);
 
  /**
   * OAuth authentication routes. (Sign in)

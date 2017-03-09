@@ -19,6 +19,7 @@
 }
 body {
   background-color: #EEEEEE;
+  height: 100%;
 }
 .account-form{
   text-align: center;
@@ -38,28 +39,93 @@ app-toolbar {
 .mdl-grid.center-items {
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin: auto!important;
 }
 .vs {
-  height:85%!important;
+  height:90%!important;
   width: auto!important;
+}
+@media (max-width: 479px){
+  .mdl-grid {
+    padding: 0px!important;
+  }
+}
+@media (max-width: 320px){
+  .card-welcome {
+    width:300px;
+  }
+  .footer {
+    visibility: hidden;
+  }
 }
 .center-div {
   margin-bottom: auto;
   margin-top: auto;
+}
+.vert-div {
+  margin-left: auto;
+  margin-right: auto;
 }
 .card-div {
   height: 40px;
 }
 .card-title {
   margin:auto;
-  color: #fff!important;
+  color: #616161!important;
 }
 .card {
   margin: 10px;
   padding: 16px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+.mdl-switch__label {
+  left: 0px!important;
+}
+.mdl-switch.is-upgraded {
+  padding-left: 0px!important;
+}
+.full-body {
+  height: 100%;
+}
+.start {
+  background: url('../images/5.jpg') center / cover;
+  min-height:100%;
+  opacity: 0.7;
+}
+.interactive-exit {
+  margin:10px;
+}
+
+.interactive-date {
+  margin: auto;
+  float: right;
+  padding-right:10px;
+}
+.mdl-button--white {
+  color:white!important;
+  font-size: 18px!important;
+}
+.interactive-button {
+  float:right;
+}
+.interactive-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 55px;
+  margin-right:10px;
+  margin-top:20px;
+}
+
+.card-welcome {
+  margin: 10px;
+  padding: 16px;
   color: #757575;
   border-radius: 5px;
-  background-color: #FF4081;
+  background: url('../images/3.jpg') center / cover;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
