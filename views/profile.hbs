@@ -1,26 +1,26 @@
-<div class="center-div mdl-cell mdl-grid.center-items vert-div">
+<div class="horz-div mdl-cell mdl-grid.center-items vert-div">
   <form method="POST" class="account-form" action="/account/profile">
     <input type="hidden" name="email" value="{{{user.email}}}"/>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <input class="mdl-textfield__input" value="{{{user.profile.name.first}}}" type="text" name="first" id="first">
       <label class="mdl-textfield__label" for="first">First Name</label>
-    </div>
+    </div></br>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <input class="mdl-textfield__input" value="{{{user.profile.name.last}}}" type="text" name="last" id="last">
       <label class="mdl-textfield__label" for="last">Last Name</label>
-    </div>
+    </div></br>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <input class="mdl-textfield__input" disabled type="text" value="{{{user.email}}}" id="email">
       <label class="mdl-textfield__label" for="email">Email</label>
-    </div>
+    </div></br>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <input class="mdl-textfield__input" type="text" pattern="[0-9]*" value="{{{user.profile.phone}}}" name="phone" id="phone">
       <label class="mdl-textfield__label" for="phone">Phone Number</label>
-    </div>
+    </div></br>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <input class="mdl-textfield__input" type="text" pattern="^([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$" value="{{{user.profile.website}}}" name="website" id="website">
       <label class="mdl-textfield__label" for="website">Website</label>
-    </div><br />
+    </div></br>
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
       Update
     </button>

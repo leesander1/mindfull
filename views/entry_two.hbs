@@ -1,0 +1,44 @@
+<div class="entry_two">
+  <div class="mdl-grid content-grid vs vert-div">
+    <div class="mdl-cell mdl-grid.center-items vert-div horz-div">
+      <h4 class="interactive-title">{{{user.profile.name.first}}} are you feeling stressed today?</h4>
+      <form method="POST" class="account-form interactive-form" action="/entry">
+        <input type="hidden" name="email" value="{{{user.email}}}"/>
+        <div class="">
+          <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive" for="stress">
+            <input type="checkbox" name="stress_level" id="stress" value="yes" class="mdl-icon-toggle__input" checked>
+            <i class="mdl-icon-toggle__label material-icons material-icons-interactive">thumb_up</i>
+          </label>
+          <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive" for="stress">
+            <input name="stress2" type="checkbox" id="stress2" value="yes" class="mdl-icon-toggle__input">
+            <i id="stress_no" class="mdl-icon-toggle__label material-icons material-icons-interactive">thumb_down</i>
+          </label>
+        </div>
+      </form>
+    </div>
+  <div class="interactive-footer">
+    <a href="/entry2">
+      <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button-back">Back</button>
+    </a>
+    <a href="/entry3">
+      <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button">Next</button>
+    </a>
+  </div>
+</div>
+
+<script>
+window.onload = function() {
+document.addEventListener("DOMContentLoaded", function (event) {
+    var _selector = document.querySelector('input[name=stress2]');
+    _selector.addEventListener('change', function (event) {
+        if (_selector.checked) {
+            // do something if checked
+            document.getElementById("stress_no").style.color = "red";
+        } else {
+            // do something else otherwise
+            document.getElementById("stress_no").style.color = "green";
+        }
+    });
+});
+}
+</script>

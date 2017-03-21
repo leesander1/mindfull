@@ -1,19 +1,19 @@
 <div class="start">
+  <a href="/">
   <button id="exit" class="mdl-button mdl-js-button mdl-button--icon mdl-button--white interactive-exit">
     <i class="material-icons">clear</i>
   </button>
-  <div class="mdl-grid content-grid vs">
+</a>
+  <div class="mdl-tooltip" data-mdl-for="exit">Exit to home</div>
+  <div class="mdl-grid content-grid vs vert-div">
     <div class="mdl-cell mdl-grid.center-items">
       <h5 class="interactive-date">{{{day}}}</h5>
+      <h4 class="">Welcome {{{user.profile.name.first}}}</h4>
     </div>
-    <div class="mdl-cell mdl-grid.center-items">
-      <h3 class="">Welcome!</h3>
-    </div>
-    <div class="mdl-tooltip" data-mdl-for="exit">Exit to home</div>
   </div>
   <div class="interactive-footer">
-    <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button">
-    Start
-    </button>
+    <a href="/entry1">
+      <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button">Start</button>
+    </a>
   </div>
 </div>

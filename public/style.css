@@ -51,6 +51,11 @@ app-toolbar {
     padding: 0px!important;
   }
 }
+@media (min-width: 325px){
+  .interactive-form{
+    padding-top: 20px;
+  }
+}
 @media (max-width: 320px){
   .card-welcome {
     width:300px;
@@ -62,10 +67,16 @@ app-toolbar {
 .center-div {
   margin-bottom: auto;
   margin-top: auto;
+  width: auto;
+}
+.horz-div {
+  margin-bottom: auto;
+  margin-top: auto;
 }
 .vert-div {
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 .card-div {
   height: 40px;
@@ -95,10 +106,27 @@ app-toolbar {
   min-height:100%;
   opacity: 0.7;
 }
+.entry_one {
+  background: url('../images/14.jpg') center / cover;
+  min-height:100%;
+  /*opacity: 0.7*/
+}
+.card-button {
+  min-width: 100px;
+}
+.entry_two {
+  background: url('../images/11.jpg') center / cover;
+  min-height:100%;
+  /*opacity: 0.7*/
+}
+
 .interactive-exit {
   margin:10px;
 }
-
+.interactive-card {
+  opacity: 0.7;
+  padding:0px;
+}
 .interactive-date {
   margin: auto;
   float: right;
@@ -108,8 +136,26 @@ app-toolbar {
   color:white!important;
   font-size: 18px!important;
 }
+.interactive-icon-title {
+  margin:0!important;
+}
 .interactive-button {
   float:right;
+}
+.interactive-title {
+  text-align:center;
+}
+.mdl-icon-toggle-interactive {
+  height: 36px!important;
+}
+.material-icons-interactive {
+  font-size:36px!important;
+  line-height: 36px!important;
+  height:36px!important;
+  width:36px!important;
+}
+.interactive-button-back {
+  float:left;
 }
 .interactive-footer {
   position: fixed;
@@ -119,6 +165,7 @@ app-toolbar {
   height: 55px;
   margin-right:10px;
   margin-top:20px;
+  margin-left:10px;
 }
 
 .card-welcome {

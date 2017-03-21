@@ -1,0 +1,59 @@
+<div class="entry_one">
+  <div class="mdl-grid content-grid vs vert-div">
+    <div class="mdl-cell mdl-grid.center-items vert-div horz-div">
+      <h4 class="interactive-title">How are you feeling today {{{user.profile.name.first}}}?</h4>
+      <form method="POST" class="account-form interactive-form" action="/entry">
+        <input type="hidden" name="email" value="{{{user.email}}}"/>
+        <div class="card interactive-card">
+          <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive" for="feeling_good">
+            <input type="checkbox" id="feeling_good" class="mdl-icon-toggle__input" >
+            <i class="mdl-icon-toggle__label material-icons material-icons-interactive">sentiment_very_satisfied</i>
+          </label>
+          <h6 class="interactive-icon-title">Good</h6>
+        </div>
+        <div class="card interactive-card">
+          <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive" for="feeling_ok">
+            <input type="checkbox" id="feeling_ok" class="mdl-icon-toggle__input" >
+            <i class="mdl-icon-toggle__label material-icons material-icons-interactive">sentiment_satisfied</i>
+          </label>
+          <h6 class="interactive-icon-title">Ok</h6>
+        </div>
+        <div class="card interactive-card">
+          <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive" for="feeling_strong">
+            <input type="checkbox" id="feeling_strong" class="mdl-icon-toggle__input" >
+            <i class="mdl-icon-toggle__label material-icons material-icons-interactive">fitness_center</i>
+          </label>
+          <h6 class="interactive-icon-title">Strong / Confident</h6>
+        </div>
+        <div class="card interactive-card">
+          <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive" for="feeling_moody">
+            <input type="checkbox" id="feeling_moody" class="mdl-icon-toggle__input" >
+            <i class="mdl-icon-toggle__label material-icons material-icons-interactive">sentiment_neutral</i>
+          </label>
+          <h6 class="interactive-icon-title">Moody</h6>
+        </div>
+        <div class="card interactive-card">
+          <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive" for="feeling_sad">
+            <input type="checkbox" id="feeling_sad" class="mdl-icon-toggle__input" >
+            <i class="mdl-icon-toggle__label material-icons material-icons-interactive">sentiment_very_dissatisfied</i>
+          </label>
+          <h6 class="interactive-icon-title">Sad</h6>
+        </div>
+        <div class="card interactive-card">
+          <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive" for="feeling_anxious">
+            <input type="checkbox" id="feeling_anxious" class="mdl-icon-toggle__input" >
+            <i class="mdl-icon-toggle__label material-icons material-icons-interactive">mood_bad</i>
+          </label>
+          <h6 class="interactive-icon-title">Anxious</h6>
+        </div></br>
+      </form>
+    </div>
+  <div class="interactive-footer">
+    <a href="/entry">
+      <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button-back">Back</button>
+    </a>
+    <a href="/entry2">
+      <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button">Next</button>
+    </a>
+  </div>
+</div>

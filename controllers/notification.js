@@ -1,6 +1,7 @@
 const async = require('async');
 const crypto = require('crypto');
 const passport = require('passport');
+const twilio = require('twilio')(process.env.TWILIO_SID, process.env.TWILIO_TOKEN);
 const User = require('../models/User');
 
 /**

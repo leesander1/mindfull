@@ -129,11 +129,12 @@ app.post('/account/password', passportConfig.isAuthenticated, userController.pos
 app.post('/account/delete', passportConfig.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink);
 
-app.get('/notification', notificationController.getNotification);
-app.post('/notification/update', notificationController.postUpdateNotification);
+app.get('/notification', passportConfig.isAuthenticated, notificationController.getNotification);
+app.post('/notification/update', passportConfig.isAuthenticated, notificationController.postUpdateNotification);
 
-app.get('/entry', entryController.newEntry);
-
+app.get('/entry', passportConfig.isAuthenticated, entryController.newEntry);
+app.get('/entry1', passportConfig.isAuthenticated, entryController.entryOne);
+app.get('/entry2', passportConfig.isAuthenticated, entryController.entryTwo);
  /**
   * OAuth authentication routes. (Sign in)
   */
