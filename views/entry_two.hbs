@@ -3,25 +3,25 @@
     <div class="mdl-cell mdl-grid.center-items vert-div">
       <h4 class="interactive-title">{{{user.profile.name.first}}}, are you feeling stressed today?</h4>
     </div>
-    <div class="mdl-cell mdl-grid.center-items vert-div interactive-yes-no">
+    <div class="mdl-cell mdl-grid.center-items vert-div interactive-yes-no horz-div">
       <form method="POST" class="account-form" action="/entry">
         <input type="hidden" name="email" value="{{{user.email}}}"/>
         <div class="">
           <label id="stress_yes_show" class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive-64 yes" for="stress_yes">
             <input type="checkbox" name="stress_level" id="stress_yes" value="true" class="mdl-icon-toggle__input">
             <i class="mdl-icon-toggle__label material-icons mdl-interactive-64">done</i>
-            <span class="interactive-title">Yes</span>
+            <h4 class="interactive-title yes-no">Yes</h4>
           </label>
           <label id="stress_no_show" class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive-64 no" for="stress_no">
             <input name="stress_level" type="checkbox" id="stress_no" value="true" class="mdl-icon-toggle__input">
             <i class="mdl-icon-toggle__label material-icons mdl-interactive-64">clear</i>
-            <span class="interactive-title">No</span>
+            <h4 class="interactive-title yes-no">No</h4>
           </label>
         </div>
       </form>
     </div>
-    <div class="mdl-tooltip" data-mdl-for="stress_yes_show">Today was stressful 😓</div>
-    <div class="mdl-tooltip" data-mdl-for="stress_no_show">Today was stress free! 😄</div>
+    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="stress_yes_show">Today was stressful 😓</div>
+    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="stress_no_show">Today was stress free! 😄</div>
     <div class="interactive-footer">
       <a href="/entry1">
         <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button-back">Back</button>

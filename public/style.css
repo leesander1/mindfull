@@ -106,6 +106,10 @@ app-toolbar {
   min-height:100%;
   opacity: 0.7;
 }
+.yes-no {
+  margin:0;
+  color:#424242;
+}
 .entry_one {
   background: url('../images/14.jpg') center / cover;
   min-height:100%;
@@ -120,7 +124,7 @@ app-toolbar {
   /*opacity: 0.85;*/
 }
 .interactive-yes-no {
-  padding-bottom: 55px;
+  height: 50%;
 }
 .interactive-exit {
   margin:10px;
@@ -169,7 +173,7 @@ app-toolbar {
   width:72px!important;
 }
 .mdl-icon-toggle.is-checked.mdl-icon-toggle-interactive-64.yes .mdl-icon-toggle__label{
-  color:#69F0AE!important;
+  color:#00C853!important;
 }
 .mdl-icon-toggle.is-checked.mdl-icon-toggle-interactive-64.no .mdl-icon-toggle__label{
   color:#FF1744!important;
