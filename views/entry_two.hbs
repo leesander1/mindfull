@@ -8,20 +8,20 @@
         <input type="hidden" name="email" value="{{{user.email}}}"/>
         <div class="">
           <label id="stress_yes_show" class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive-64 yes" for="stress_yes">
-            <input type="checkbox" name="stress_level" id="stress_yes" value="true" class="mdl-icon-toggle__input">
+            <input type="radio" name="stress_level" id="stress_yes" value="true" class="mdl-icon-toggle__input">
             <i class="mdl-icon-toggle__label material-icons mdl-interactive-64">done</i>
             <h4 class="interactive-title yes-no">Yes</h4>
           </label>
           <label id="stress_no_show" class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive-64 no" for="stress_no">
-            <input name="stress_level" type="checkbox" id="stress_no" value="true" class="mdl-icon-toggle__input">
-            <i class="mdl-icon-toggle__label material-icons mdl-interactive-64">clear</i>
+            <input name="stress_level" type="radio" id="stress_no" value="true" class="mdl-icon-toggle__input">
+            <i id="stress_no_icon" class="mdl-icon-toggle__label material-icons mdl-interactive-64">clear</i>
             <h4 class="interactive-title yes-no">No</h4>
           </label>
         </div>
       </form>
     </div>
-    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="stress_yes_show">Today was stressful 😓</div>
-    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" data-mdl-for="stress_no_show">Today was stress free! 😄</div>
+    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" id="tooltip_yes" data-mdl-for="stress_yes_show">Today was stressful 😓</div>
+    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top"id="tooltip_no" data-mdl-for="stress_no_show">Today was stress free! 😄</div>
     <div class="interactive-footer">
       <a href="/entry1">
         <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button-back">Back</button>
@@ -32,3 +32,19 @@
     </div>
   </div>
 </div>
+<script>
+
+(function() {
+  'use strict';
+  var stressyes = document.querySelector('#stress_yes');
+  var stressno = document.querySelector('#stress_no');
+  stressyes.addEventListener('click', function() {
+    'use strict';
+    document.getElementById("stress_no_show").classList.remove("is-checked");
+  });
+  stressno.addEventListener('click', function() {
+    'use strict';
+    document.getElementById("stress_yes_show").classList.remove("is-checked");
+  });
+}());
+</script>

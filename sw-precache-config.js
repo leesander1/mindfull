@@ -11,10 +11,52 @@
 /* eslint-env node */
 
 module.exports = {
+  dynamicUrlToDependencies: {
+    '/': [
+      'views/layout/main.hbs',
+      'views/home.hbs'
+    ],
+    '/login': [
+      'views/layout/main.hbs',
+      'views/login.hbs'
+    ],
+    '/signup': [
+      'views/layout/main.hbs',
+      'views/signup.hbs'
+    ],
+    '/notification': [
+      'views/layout/main.hbs',
+      'views/notification.hbs'
+    ],
+    '/account': [
+      'views/layout/main.hbs',
+      'views/profile.hbs'
+    ],
+    '/entry': [
+      'views/layout/interactive.hbs',
+      'views/entry.hbs'
+    ],
+    '/entry1': [
+      'views/layout/interactive.hbs',
+      'views/entry_one.hbs'
+    ],
+    '/entry2': [
+      'views/layout/interactive.hbs',
+      'views/entry_two.hbs'
+    ]
+  },
   staticFileGlobs: [
-    '/index.html',
+    '/public',
     '/manifest.json',
+    '/bower_components/material-design-lite/material.min.js',
+    '/bower_components/material-design-lite/material.min.js',
     '/bower_components/webcomponentsjs/webcomponents-lite.min.js',
+    '/bower_components/*',
   ],
   navigateFallback: 'index.html',
+  verbose: true,
+  runtimeCaching: [{
+  urlPattern: /this\\.is\\.a\\.regex/,
+  handler: 'networkFirst'
+}]
 };

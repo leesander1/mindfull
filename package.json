@@ -52,5 +52,8 @@
   "engines": {
     "node": "^0.10.00",
     "npm": "^1.4.00"
+  },
+  "devDependencies": {
+    "sw-precache": "^5.1.0"
   }
 }

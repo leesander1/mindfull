@@ -67,9 +67,12 @@ Add new .js file to /tests folder.
 | **config**/passport.js             | Passport strategies and middleware to manage login.          |
 | **models**/User.js                 | Mongoose schema and model for User.                          |
 | **public**/                        | Static assets (fonts, css, js, img).                         |
+| **views**/                         | All the handlebars layouts and views                         |
 | **controllers**/api.js             | Controller for /api route and to manage twilio requests.     |
 | **controllers**/home.js            | Controller for home.                                         |
 | **controllers**/user.js            | Controller for user account management.                      |
+| **controllers**/notification.js    | Controller to manage notifications                           |
+| **controllers**/entry.js           | Controller for entries.                                      |
 | **test**/                          | Folder containing all our unit tests for mocha.              |
 | example.env                        | Your API keys, tokens, passwords and database URI.           |
 | package.json                       | npm package dependencies & node config                       |
