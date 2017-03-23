@@ -61,7 +61,6 @@ mongoose.connection.on('error', () => {
  * Express configuration.
  */
 app.set('port', process.env.PORT || 3000);
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine', '.hbs');
@@ -84,6 +83,7 @@ app.use(session({
     autoReconnect: true
   })
 }));
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
