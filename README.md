@@ -87,6 +87,7 @@ Add new .js file to /tests folder.
 * Hosting - heroku
 * Dependency Management - david
 * Tasks - cron
+* web notifications - node-pushnotifications
 * Voice / SMS - twillio
 * Email - sendGrid
 * Notifications - google cloud messaging (polymer component)
