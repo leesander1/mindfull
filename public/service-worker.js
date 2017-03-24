@@ -14,17 +14,21 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const PRECACHE = 'precache-v1';
+const PRECACHE = 'precache-v00001';
 const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
-  '/public',
+  '/',
   '/manifest.json',
   '/bower_components/material-design-lite/material.min.js',
   '/bower_components/material-design-lite/material.min.js',
+  '/bower_components/material-design-icons/iconfont/material-icons.css',
   '/bower_components/webcomponentsjs/webcomponents-lite.min.js',
-  '/bower_components/*',
+  '/js/',
+  '/styles/',
+  '/images/',
+  '/style.css',
 ];
 
 
