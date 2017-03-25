@@ -31,22 +31,16 @@
 <script>
 (function() {
   'use strict';
-  var sleepyes = document.querySelector('#sleep_yes');
-  var sleepno = document.querySelector('#sleep_no');
-  sleepyes.addEventListener('click', function() {
-    'use strict';
-    document.getElementById("sleep_no_show").classList.remove("is-checked");
+  
+  var slide = document.querySelector('#slide_01');
+  var txt = document.querySelector('#text_01');
+  var inp = document.querySelector('#inp_text_01');
+  slide.on('input',function(){
+    txt.get(0).MaterialTextfield.change(this.value);
   });
-  sleepno.addEventListener('click', function() {
-    'use strict';
-    document.getElementById("sleep_yes_show").classList.remove("is-checked");
-  });
-  $('#slide_01').on('input',function(){
-    $("#text_01").get(0).MaterialTextfield.change(this.value);
-  });
-  $('#inp_text_01').keyup(function() {
-    $("#slide_01").get(0).MaterialSlider.change($( '#inp_text_01').val());
-    console.dir($('#slide_01'));
+  inp.keyup(function() {
+    slide.get(0).MaterialSlider.change(txt.val());
+    console.dir(slide);
   });
 }());
 </script>
