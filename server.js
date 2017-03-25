@@ -134,8 +134,10 @@ app.get('/notification', passportConfig.isAuthenticated, notificationController.
 app.post('/notification/update', passportConfig.isAuthenticated, notificationController.postUpdateNotification);
 
 app.get('/entry', passportConfig.isAuthenticated, entryController.newEntry);
+/**app.post('/entry', passportConfig.isAuthenticated, entryController.postNewEntry);**/
 app.get('/entry1', passportConfig.isAuthenticated, entryController.entryOne);
 app.get('/entry2', passportConfig.isAuthenticated, entryController.entryTwo);
+app.get('/entry3', passportConfig.isAuthenticated, entryController.entryThree);
  /**
   * OAuth authentication routes. (Sign in)
   */

@@ -31,3 +31,10 @@ exports.entryTwo = (req, res) => {
     layout: 'interactive',
   });
 };
+
+exports.entryThree = (req, res) => {
+  res.render('entry_three', {
+    title: 'Sleep Quality',
+    layout: 'interactive',
+  });
+};

@@ -1,0 +1,49 @@
+<div class="vs entry_three">
+  <div class="mdl-grid content-grid vs vert-div">
+    <div class="mdl-cell mdl-grid.center-items vert-div">
+      <h4 class="interactive-title">Did you get a good nights sleep??</h4>
+    </div>
+    <div class="mdl-cell mdl-grid.center-items vert-div interactive-yes-no horz-div">
+      <form method="POST" class="account-form" action="/entry">
+        <input type="hidden" name="email" value="{{{user.email}}}"/>
+        <div class="">
+          <label id="sleep_yes_show" class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive-64 yes" for="sleep_yes">
+            <input type="radio" name="sleep_level" id="sleep_yes" value="true" class="mdl-icon-toggle__input">
+            <i class="mdl-icon-toggle__label material-icons mdl-interactive-64">done</i>
+            <h4 class="interactive-title yes-no">Yes</h4>
+          </label>
+          <label id="sleep_no_show" class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive-64 no" for="sleep_no">
+            <input name="sleep_level" type="radio" id="sleep_no" value="true" class="mdl-icon-toggle__input">
+            <i id="sleep_no_icon" class="mdl-icon-toggle__label material-icons mdl-interactive-64">clear</i>
+            <h4 class="interactive-title yes-no">No</h4>
+          </label>
+        </div>
+      </form>
+    </div>
+    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" id="tooltip_yes" data-mdl-for="sleep_yes_show">I feel well rested! 😄</div>
+    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top"id="tooltip_no" data-mdl-for="sleep_no_show">I feel tired and sleepy! 😓</div>
+    <div class="interactive-footer">
+      <a href="/entry2">
+        <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button-back">Back</button>
+      </a>
+      <a href="/entry4">
+        <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button">Next</button>
+      </a>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var sleepyes = document.querySelector('#sleep_yes');
+  var stressno = document.querySelector('#sleep_no');
+  stressyes.addEventListener('click', function() {
+    'use strict';
+    document.getElementById("sleep_no_show").classList.remove("is-checked");
+  });
+  stressno.addEventListener('click', function() {
+    'use strict';
+    document.getElementById("sleep_yes_show").classList.remove("is-checked");
+  });
+}());
+</script>

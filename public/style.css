@@ -123,6 +123,11 @@ app-toolbar {
   min-height:100%;
   /*opacity: 0.85;*/
 }
+.entry_three {
+  background: url('../images/2.jpg') center / cover;
+  min-height:100%;
+  /*opacity: 0.85;*/
+}
 .interactive-yes-no {
   height: 50%;
 }
