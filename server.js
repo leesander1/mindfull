@@ -139,6 +139,7 @@ app.get('/entry1', passportConfig.isAuthenticated, entryController.entryOne);
 app.get('/entry2', passportConfig.isAuthenticated, entryController.entryTwo);
 app.get('/entry3', passportConfig.isAuthenticated, entryController.entryThree);
 app.get('/entry4', passportConfig.isAuthenticated, entryController.entryFour);
+
  /**
   * OAuth authentication routes. (Sign in)
   */
