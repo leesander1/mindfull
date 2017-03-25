@@ -7,26 +7,21 @@
       <form method="POST" class="account-form" action="/entry">
         <input type="hidden" name="email" value="{{{user.email}}}"/>
         <div class="">
-          <label id="sleep_yes_show" class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive-64 yes" for="sleep_yes">
-            <input type="radio" name="sleep_level" id="sleep_yes" value="true" class="mdl-icon-toggle__input">
-            <i class="mdl-icon-toggle__label material-icons mdl-interactive-64">done</i>
-            <h4 class="interactive-title yes-no">Yes</h4>
-          </label>
-          <label id="sleep_no_show" class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive-64 no" for="sleep_no">
-            <input name="sleep_level" type="radio" id="sleep_no" value="true" class="mdl-icon-toggle__input">
-            <i id="sleep_no_icon" class="mdl-icon-toggle__label material-icons mdl-interactive-64">clear</i>
-            <h4 class="interactive-title yes-no">No</h4>
-          </label>
+          <div class="mdl-textfield mdl-js-textfield" id="text_01">
+            <input class="mdl-textfield__input" type="text" id="inp_text_01">
+          </div>
+          <input class="mdl-slider mdl-js-slider" type="range"
+            min="0" max="16" value="5" tabindex="0" id = "slide_01">
         </div>
       </form>
     </div>
     <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" id="tooltip_yes" data-mdl-for="sleep_yes_show">I feel well rested! 😄</div>
     <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top"id="tooltip_no" data-mdl-for="sleep_no_show">I feel tired and sleepy! 😓</div>
     <div class="interactive-footer">
-      <a href="/entry2">
+      <a href="/entry3">
         <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button-back">Back</button>
       </a>
-      <a href="/entry4">
+      <a href="/entry5">
         <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button">Next</button>
       </a>
     </div>
@@ -44,6 +39,13 @@
   sleepno.addEventListener('click', function() {
     'use strict';
     document.getElementById("sleep_yes_show").classList.remove("is-checked");
+  });
+  $('#slide_01').on('input',function(){
+    $("#text_01").get(0).MaterialTextfield.change(this.value);
+  });
+  $('#inp_text_01').keyup(function() {
+    $("#slide_01").get(0).MaterialSlider.change($( '#inp_text_01').val());
+    console.dir($('#slide_01'));
   });
 }());
 </script>

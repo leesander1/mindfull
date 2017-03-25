@@ -38,3 +38,10 @@ exports.entryThree = (req, res) => {
     layout: 'interactive',
   });
 };
+
+exports.entryFour = (req, res) => {
+  res.render('entry_four', {
+    title: 'Hours Slept',
+    layout: 'interactive',
+  });
+};
