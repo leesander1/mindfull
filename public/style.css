@@ -137,6 +137,7 @@ app-toolbar {
 .interactive_number {
   text-align:center;
   font-size:50px;
+  color:white;
 }
 .interactive-card {
   opacity: 0.7;
