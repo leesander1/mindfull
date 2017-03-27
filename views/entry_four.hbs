@@ -7,11 +7,10 @@
       <form method="POST" class="account-form" action="/entry">
         <input type="hidden" name="email" value="{{{user.email}}}"/>
         <div class="">
-          <input class="mdl-slider mdl-js-slider" type="range"
-            min="0" max="16" value="5" tabindex="0" id = "slide_01">
-          <div class="mdl-textfield mdl-js-textfield" id="text_01">
-            <input class="mdl-textfield__input interactive_number" type="number" id="inp_text_01" pattern="-?[0-9]*(\.[0-9]+)?">
+          <div class="mdl-textfield mdl-js-textfield" id="sleep_hours">
+            <input class="mdl-textfield__input interactive_number" type="number" id="inp_text_01" pattern="-?[0-9]*(\.[0-9]+)?" autofocus>
             <span class="mdl-textfield__error">Input is not a number!</span>
+            <label class="mdl-textfield__label" for="sleep_hours">6</label>
           </div>
         </div>
       </form>
@@ -29,18 +28,4 @@
   </div>
 </div>
 <script>
-(function() {
-  'use strict';
-
-  var slide = document.querySelector('#slide_01');
-  var txt = document.querySelector('#text_01');
-  var inp = document.querySelector('#inp_text_01');
-  slide.on('input',function(){
-    txt.get(0).MaterialTextfield.change(this.value);
-  });
-  inp.keyup(function() {
-    slide.get(0).MaterialSlider.change(txt.val());
-    console.dir(slide);
-  });
-}());
 </script>
