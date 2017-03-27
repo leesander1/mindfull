@@ -119,8 +119,8 @@ app-toolbar {
   min-width: 100px;
 }
 .entry_two {
-  /*background: url('../images/11.jpg') center / cover; */
-  background:#FF4081;
+  background: url('../images/11.jpg') center / cover; 
+  /*background:#FF4081;*/
   min-height:100%;
   /*opacity: 0.85;*/
 }
