@@ -38,7 +38,7 @@ exports.postNewEntry = (req, res, next) => {
     }
     entry.save((err) => {
       if (err) { return next(err); }
-      res.redirect('/entry');
+      res.redirect('/entry1');
     });
   });
 };
