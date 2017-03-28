@@ -70,7 +70,7 @@ exports.postEntryOne = (req, res, next) => {
          {
              createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
          }
-      ] }, (err, existingDate) => {
+      ] }, (err, entry) => {
     if (err) { return next(err); }
     entry.email = req.body.email || '';
     entry.feeling.good = req.body.feeling_good || '';
