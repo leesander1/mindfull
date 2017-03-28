@@ -18,6 +18,31 @@ exports.newEntry = (req, res) => {
   });
 };
 
+/**
+ * POST /entry
+ * Post entry.
+ */
+exports.postNewEntry = (req, res, next) => {
+
+  const entry = new Entry({
+    email: req.body.email,
+    name: user.profile.name.first,
+    phone: user.profile.phone,
+    date: Date()
+  });
+
+  Entry.findOne({ date: Date() }, (err, existingDate) => {
+    if (err) { return next(err); }
+    if (existingDate) {
+      return res.redirect('/entry');
+    }
+    entry.save((err) => {
+      if (err) { return next(err); }
+      res.redirect('/entry');
+    });
+  });
+};
+
 exports.entryOne = (req, res) => {
   res.render('entry_one', {
     title: 'How are you feeling?',

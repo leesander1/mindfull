@@ -6,11 +6,11 @@ const entrySchema = new mongoose.Schema({
   email: String,
   date: {
     type: Date,
-    default: Date.now()
+    default: Date()
   },
   sleep: {
     hours: Number,
-    quality: Number
+    quality: { type: Boolean, default: false }
   },
   med_morning: { type: Boolean, default: false },
   med_evening: { type: Boolean, default: false },
