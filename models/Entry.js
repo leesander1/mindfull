@@ -8,6 +8,7 @@ const entrySchema = new mongoose.Schema({
     type: Date,
     default: Date()
   },
+  dayOfYear: { $dayOfYear: "$date" },
   sleep: {
     hours: Number,
     quality: { type: Boolean, default: false }
