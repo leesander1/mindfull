@@ -41,6 +41,7 @@ exports.postNewEntry = (req, res, next) => {
       ] }, (err, existingDate) => {
     if (err) { return next(err); }
     if (existingDate) {
+      console.log('error already submitted.');
       return res.redirect('/entry');
     }
     entry.save((err) => {
