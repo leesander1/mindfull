@@ -28,10 +28,12 @@ exports.postNewEntry = (req, res, next) => {
     email: req.body.email,
     name: req.body.name,
     phone: req.body.phone,
-    date: Date()
+    date: { $dayOfYear: "Date()" }
   });
 
-  Entry.findOne({ date: Date() }, (err, existingDate) => {
+  let today = Date();
+  Entry.findOne({ date: { $eq: { $dayOfYear: 'today' }} }, (err, existingDate) => {
+    console.log(today);
     if (err) { return next(err); }
     if (existingDate) {
       return res.redirect('/entry');
