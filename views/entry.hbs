@@ -12,8 +12,11 @@
     </div>
   </div>
   <div class="interactive-footer">
-    <a href="/entry1">
-      <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button">Start</button>
-    </a>
+    <form method="POST" action="/entry">
+      <input type="hidden" name="email" value="{{{user.email}}}"/>
+      <input type="hidden" name="name" value="{{{user.profile.name.first}}}"/>
+      <input type="hidden" name="phone" value="{{{user.profile.phone}}}"/>
+      <button type="submit" class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button">Start</button>
+    </form>
   </div>
 </div>

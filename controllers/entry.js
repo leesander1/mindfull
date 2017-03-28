@@ -26,8 +26,8 @@ exports.postNewEntry = (req, res, next) => {
 
   const entry = new Entry({
     email: req.body.email,
-    name: user.profile.name.first,
-    phone: user.profile.phone,
+    name: req.body.name,
+    phone: req.body.phone,
     date: Date()
   });
 
