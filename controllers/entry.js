@@ -75,7 +75,7 @@ exports.postEntryOne = (req, res, next) => {
     entry.email = req.body.email || '';
     entry.feeling.good = req.body.feeling_good || '';
     entry.feeling.ok = req.body.feeling_ok || '';
-    entry.feeling.confident = req.body.feeling_confident || '';
+    entry.feeling.confident = req.body.feeling_strong || '';
     entry.feeling.moody = req.body.feeling_moody || '';
     entry.feeling.axious = req.body.feeling_anxious || '';
     entry.save((err) => {

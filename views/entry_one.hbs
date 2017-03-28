@@ -8,42 +8,42 @@
         <input type="hidden" name="phone" value="{{{user.profile.phone}}}"/>
         <div class="card interactive-card">
           <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive" for="feeling_good">
-            <input type="checkbox" id="feeling_good" class="mdl-icon-toggle__input">
+            <input type="checkbox" name="feeling_good" id="feeling_good" value="{{{entry.feeling.good}}}" class="mdl-icon-toggle__input">
             <i class="mdl-icon-toggle__label material-icons material-icons-interactive">sentiment_very_satisfied</i>
           </label>
           <h6 class="interactive-icon-title">Good</h6>
         </div>
         <div class="card interactive-card">
           <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive" for="feeling_ok">
-            <input type="checkbox" id="feeling_ok" class="mdl-icon-toggle__input" >
+            <input type="checkbox" name="feeling_ok" id="feeling_ok" class="mdl-icon-toggle__input" value="{{{entry.feeling.ok}}}" >
             <i class="mdl-icon-toggle__label material-icons material-icons-interactive">sentiment_satisfied</i>
           </label>
           <h6 class="interactive-icon-title">Ok</h6>
         </div>
         <div class="card interactive-card">
           <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive" for="feeling_strong">
-            <input type="checkbox" id="feeling_strong" class="mdl-icon-toggle__input" >
+            <input type="checkbox" name="feeling_strong" id="feeling_strong" class="mdl-icon-toggle__input" value="{{{entry.feeling.confident}}}">
             <i class="mdl-icon-toggle__label material-icons material-icons-interactive">fitness_center</i>
           </label>
           <h6 class="interactive-icon-title">Strong / Confident</h6>
         </div>
         <div class="card interactive-card">
           <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive" for="feeling_moody">
-            <input type="checkbox" id="feeling_moody" class="mdl-icon-toggle__input" >
+            <input type="checkbox" id="feeling_moody" name="feeling_moody" class="mdl-icon-toggle__input" value="{{{entry.feeling.moody}}}" >
             <i class="mdl-icon-toggle__label material-icons material-icons-interactive">sentiment_neutral</i>
           </label>
           <h6 class="interactive-icon-title">Moody</h6>
         </div>
         <div class="card interactive-card">
           <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive" for="feeling_sad">
-            <input type="checkbox" id="feeling_sad" class="mdl-icon-toggle__input" >
+            <input type="checkbox" id="feeling_sad" name="feeling_sad" class="mdl-icon-toggle__input" value="{{{entry.feeling.sad}}}" >
             <i class="mdl-icon-toggle__label material-icons material-icons-interactive">sentiment_very_dissatisfied</i>
           </label>
           <h6 class="interactive-icon-title">Sad</h6>
         </div>
         <div class="card interactive-card">
           <label class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive" for="feeling_anxious">
-            <input type="checkbox" id="feeling_anxious" class="mdl-icon-toggle__input" >
+            <input type="checkbox" id="feeling_anxious" name="feeling_anxious" class="mdl-icon-toggle__input" value="{{{entry.feeling.anxious}}}">
             <i class="mdl-icon-toggle__label material-icons material-icons-interactive">mood_bad</i>
           </label>
           <h6 class="interactive-icon-title">Anxious</h6>
