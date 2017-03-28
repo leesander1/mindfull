@@ -35,7 +35,7 @@ const entrySchema = new mongoose.Schema({
     sad: { type: Boolean, default: false },
     anxious: { type: Boolean, default: false },
     moody: { type: Boolean, default: false },
-    strong: { type: Boolean, default: false },
+    confident: { type: Boolean, default: false },
     good: { type: Boolean, default: false },
     ok: { type: Boolean, default: false },
   },
