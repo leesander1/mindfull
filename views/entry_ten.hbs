@@ -1,0 +1,47 @@
+<div class="vs entry_color">
+  <div class="mdl-grid content-grid vs vert-div">
+    <div class="mdl-cell mdl-grid.center-items vert-div">
+      <h4 class="interactive-title">{{{entry_title}}}</h4>
+    </div>
+    <div class="mdl-cell mdl-grid.center-items vert-div interactive-yes-no horz-div">
+      <form method="POST" class="account-form" action="{{{form_action}}}" id="entry">
+        <input type="hidden" name="email" value="{{{user.email}}}"/>
+        <div class="">
+          <label id="input_yes_show" class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive-64 yes" for="input_yes">
+            <input type="radio" name="poop" id="input_yes" value="true" class="mdl-icon-toggle__input">
+            <i class="mdl-icon-toggle__label material-icons mdl-interactive-64">done</i>
+            <h4 class="interactive-title yes-no">Yes</h4>
+          </label>
+          <label id="input_no_show" class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive-64 no" for="input_no">
+            <input name="poop" type="radio" id="input_no" value="false" class="mdl-icon-toggle__input">
+            <i id="input_no_icon" class="mdl-icon-toggle__label material-icons mdl-interactive-64">clear</i>
+            <h4 class="interactive-title yes-no">No</h4>
+          </label>
+        </div>
+      </form>
+    </div>
+    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" id="tooltip_yes" data-mdl-for="input_yes_show">{{{tooltip_yes}}}</div>
+    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top"id="tooltip_no" data-mdl-for="input_no_show">{{{tooltip_no}}}</div>
+    <div class="interactive-footer">
+      <a href="{{{last_entry}}}">
+        <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button-back">Back</button>
+      </a>
+      <button type="submit" form="entry" class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button">Next</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var buttonyes = document.querySelector('#input_yes');
+  var buttonno = document.querySelector('#input_no');
+  buttonyes.addEventListener('click', function() {
+    'use strict';
+    document.getElementById("input_no_show").classList.remove("is-checked");
+  });
+  buttonno.addEventListener('click', function() {
+    'use strict';
+    document.getElementById("input_yes_show").classList.remove("is-checked");
+  });
+}());
+</script>

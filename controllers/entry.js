@@ -349,7 +349,7 @@ exports.postEntryEight = (req, res, next) => {
 
 exports.entryNine = (req, res) => {
   res.render('entry_nine', {
-    title: 'counselling',
+    title: 'Prayer',
     layout: 'interactive',
   });
 };
@@ -369,6 +369,48 @@ exports.postEntryNine = (req, res, next) => {
       ] }, (err, entry) => {
     if (err) { return next(err); }
     entry.prayed = req.body.prayed || '';
+    entry.save((err) => {
+      if (err) {
+        if (err.code === 11000) {
+          req.flash('errors', { msg: 'error' });
+          return res.redirect('/');
+        }
+        return next(err);
+      }
+      req.flash('success', { msg: 'Success' });
+      res.redirect('/entry10');
+    });
+  });
+};
+
+exports.entryTen = (req, res) => {
+  res.render('entry_ten', {
+    title: 'digestion',
+    entry_title:'💩🚽?',
+    form_action:'/entry10',
+    tooltip_yes:'Right on!',
+    tooltip_no:'Aww that stinks 👃',
+    last_entry:'/entry9',
+    next_entry:'/',
+    layout: 'interactive',
+  });
+};
+
+/**
+ * POST /entry10
+ * Post entry.
+ */
+exports.postEntryTen = (req, res, next) => {
+
+  Entry.findOne({
+    $and: [
+         { email: req.body.email },
+         {
+             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+         }
+      ] }, (err, entry) => {
+    if (err) { return next(err); }
+    entry.digestion = req.body.poop || '';
     entry.save((err) => {
       if (err) {
         if (err.code === 11000) {
