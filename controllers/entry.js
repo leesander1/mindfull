@@ -341,6 +341,43 @@ exports.postEntryEight = (req, res, next) => {
         return next(err);
       }
       req.flash('success', { msg: 'Success' });
+      res.redirect('/entry9');
+    });
+  });
+};
+
+
+exports.entryNine = (req, res) => {
+  res.render('entry_nine', {
+    title: 'counselling',
+    layout: 'interactive',
+  });
+};
+
+/**
+ * POST /entry9
+ * Post entry.
+ */
+exports.postEntryNine = (req, res, next) => {
+
+  Entry.findOne({
+    $and: [
+         { email: req.body.email },
+         {
+             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+         }
+      ] }, (err, entry) => {
+    if (err) { return next(err); }
+    entry.prayed = req.body.prayed || '';
+    entry.save((err) => {
+      if (err) {
+        if (err.code === 11000) {
+          req.flash('errors', { msg: 'error' });
+          return res.redirect('/');
+        }
+        return next(err);
+      }
+      req.flash('success', { msg: 'Success' });
       res.redirect('/');
     });
   });

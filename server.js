@@ -64,6 +64,7 @@ app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs({defaultLayout: 'main', extname: '.hbs'}));
 app.set('view engine', '.hbs');
+app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 app.use(compression());
 app.use(sass({
   src: path.join(__dirname, 'public'),
@@ -107,8 +108,9 @@ app.use((req, res, next) => {
   }
   next();
 });
+
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
-app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+
 
 /**
  * Primary app routes.
@@ -151,6 +153,9 @@ app.get('/entry7', passportConfig.isAuthenticated, entryController.entrySeven);
 app.post('/entry7', passportConfig.isAuthenticated, entryController.postEntrySeven);
 app.get('/entry8', passportConfig.isAuthenticated, entryController.entryEight);
 app.post('/entry8', passportConfig.isAuthenticated, entryController.postEntryEight);
+app.get('/entry9', passportConfig.isAuthenticated, entryController.entryNine);
+app.post('/entry9', passportConfig.isAuthenticated, entryController.postEntryNine);
+
  /**
   * OAuth authentication routes. (Sign in)
   */
