@@ -246,7 +246,7 @@ exports.entrySix = (req, res) => {
 };
 
 /**
- * POST /entry5
+ * POST /entry6
  * Post entry.
  */
 exports.postEntrySix = (req, res, next) => {
@@ -260,6 +260,42 @@ exports.postEntrySix = (req, res, next) => {
       ] }, (err, entry) => {
     if (err) { return next(err); }
     entry.homework = req.body.homework || '';
+    entry.save((err) => {
+      if (err) {
+        if (err.code === 11000) {
+          req.flash('errors', { msg: 'error' });
+          return res.redirect('/');
+        }
+        return next(err);
+      }
+      req.flash('success', { msg: 'Success' });
+      res.redirect('/entry7');
+    });
+  });
+};
+
+exports.entrySeven = (req, res) => {
+  res.render('entry_seven', {
+    title: 'Work Out',
+    layout: 'interactive',
+  });
+};
+
+/**
+ * POST /entry7
+ * Post entry.
+ */
+exports.postEntrySeven = (req, res, next) => {
+
+  Entry.findOne({
+    $and: [
+         { email: req.body.email },
+         {
+             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+         }
+      ] }, (err, entry) => {
+    if (err) { return next(err); }
+    entry.workout = req.body.workout || '';
     entry.save((err) => {
       if (err) {
         if (err.code === 11000) {

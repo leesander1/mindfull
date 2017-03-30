@@ -135,24 +135,21 @@ app.post('/notification/update', passportConfig.isAuthenticated, notificationCon
 
 app.get('/entry', passportConfig.isAuthenticated, entryController.newEntry);
 app.post('/entry', passportConfig.isAuthenticated, entryController.postNewEntry);
-
 app.get('/entry1', passportConfig.isAuthenticated, entryController.entryOne);
 app.post('/entry1', passportConfig.isAuthenticated, entryController.postEntryOne);
-
 app.get('/entry2', passportConfig.isAuthenticated, entryController.entryTwo);
 app.post('/entry2', passportConfig.isAuthenticated, entryController.postEntryTwo);
-
 app.get('/entry3', passportConfig.isAuthenticated, entryController.entryThree);
 app.post('/entry3', passportConfig.isAuthenticated, entryController.postEntryThree);
-
 app.get('/entry4', passportConfig.isAuthenticated, entryController.entryFour);
 app.post('/entry4', passportConfig.isAuthenticated, entryController.postEntryFour);
-
 app.get('/entry5', passportConfig.isAuthenticated, entryController.entryFive);
 app.post('/entry5', passportConfig.isAuthenticated, entryController.postEntryFive);
-
 app.get('/entry6', passportConfig.isAuthenticated, entryController.entrySix);
 app.post('/entry6', passportConfig.isAuthenticated, entryController.postEntrySix);
+app.get('/entry7', passportConfig.isAuthenticated, entryController.entrySeven);
+app.post('/entry7', passportConfig.isAuthenticated, entryController.postEntrySeven);
+
  /**
   * OAuth authentication routes. (Sign in)
   */

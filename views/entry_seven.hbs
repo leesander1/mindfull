@@ -1,0 +1,47 @@
+<div class="vs entry_seven">
+  <div class="mdl-grid content-grid vs vert-div">
+    <div class="mdl-cell mdl-grid.center-items vert-div">
+      <h4 class="interactive-title">Did you work out today?</h4>
+    </div>
+    <div class="mdl-cell mdl-grid.center-items vert-div interactive-yes-no horz-div">
+      <form method="POST" class="account-form" action="/entry7" id="entry7">
+        <input type="hidden" name="email" value="{{{user.email}}}"/>
+        <div class="">
+          <label id="homework_yes_show" class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive-64 yes" for="homework_yes">
+            <input type="radio" name="workout" id="homework_yes" value="true" class="mdl-icon-toggle__input">
+            <i class="mdl-icon-toggle__label material-icons mdl-interactive-64">done</i>
+            <h4 class="interactive-title yes-no">Yes</h4>
+          </label>
+          <label id="homework_no_show" class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive-64 no" for="homework_no">
+            <input name="workout" type="radio" id="homework_no" value="false" class="mdl-icon-toggle__input">
+            <i id="homework_no_icon" class="mdl-icon-toggle__label material-icons mdl-interactive-64">clear</i>
+            <h4 class="interactive-title yes-no">No</h4>
+          </label>
+        </div>
+      </form>
+    </div>
+    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" id="tooltip_yes" data-mdl-for="homework_yes_show">Well done 😄</div>
+    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top"id="tooltip_no" data-mdl-for="homework_no_show">Try to be active tomorrow!</div>
+    <div class="interactive-footer">
+      <a href="/entry6">
+        <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button-back">Back</button>
+      </a>
+      <button type="submit" form="entry7" class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button">Next</button>
+    </div>
+  </div>
+</div>
+<script>
+(function() {
+  'use strict';
+  var homeworkyes = document.querySelector('#homework_yes');
+  var homeworkno = document.querySelector('#homework_no');
+  homeworkyes.addEventListener('click', function() {
+    'use strict';
+    document.getElementById("homework_no_show").classList.remove("is-checked");
+  });
+  homeworkno.addEventListener('click', function() {
+    'use strict';
+    document.getElementById("homework_yes_show").classList.remove("is-checked");
+  });
+}());
+</script>
