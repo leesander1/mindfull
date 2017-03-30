@@ -143,6 +143,8 @@ app.get('/entry2', passportConfig.isAuthenticated, entryController.entryTwo);
 app.post('/entry2', passportConfig.isAuthenticated, entryController.postEntryTwo);
 
 app.get('/entry3', passportConfig.isAuthenticated, entryController.entryThree);
+app.post('/entry3', passportConfig.isAuthenticated, entryController.postEntryThree);
+
 app.get('/entry4', passportConfig.isAuthenticated, entryController.entryFour);
 
  /**
