@@ -149,7 +149,8 @@ app.get('/entry6', passportConfig.isAuthenticated, entryController.entrySix);
 app.post('/entry6', passportConfig.isAuthenticated, entryController.postEntrySix);
 app.get('/entry7', passportConfig.isAuthenticated, entryController.entrySeven);
 app.post('/entry7', passportConfig.isAuthenticated, entryController.postEntrySeven);
-
+app.get('/entry8', passportConfig.isAuthenticated, entryController.entryEight);
+app.post('/entry8', passportConfig.isAuthenticated, entryController.postEntryEight);
  /**
   * OAuth authentication routes. (Sign in)
   */

@@ -115,6 +115,11 @@ app-toolbar {
   min-height:100%;
   /*opacity: 0.7*/
 }
+.entry_eight {
+  background: url('../images/73.jpg') center / cover;
+  min-height:100%;
+  /*opacity: 0.7*/
+}
 .entry_seven {
   background: url('../images/54.png') center / cover;
   min-height:100%;

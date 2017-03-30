@@ -309,3 +309,39 @@ exports.postEntrySeven = (req, res, next) => {
     });
   });
 };
+
+exports.entryEight = (req, res) => {
+  res.render('entry_eight', {
+    title: 'counselling',
+    layout: 'interactive',
+  });
+};
+
+/**
+ * POST /entry8
+ * Post entry.
+ */
+exports.postEntryEight = (req, res, next) => {
+
+  Entry.findOne({
+    $and: [
+         { email: req.body.email },
+         {
+             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+         }
+      ] }, (err, entry) => {
+    if (err) { return next(err); }
+    entry.counselling = req.body.counselling || '';
+    entry.save((err) => {
+      if (err) {
+        if (err.code === 11000) {
+          req.flash('errors', { msg: 'error' });
+          return res.redirect('/');
+        }
+        return next(err);
+      }
+      req.flash('success', { msg: 'Success' });
+      res.redirect('/');
+    });
+  });
+};
