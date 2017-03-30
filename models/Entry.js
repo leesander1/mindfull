@@ -39,7 +39,7 @@ const entrySchema = new mongoose.Schema({
     good: { type: Boolean, default: false },
     ok: { type: Boolean, default: false },
   },
-  stress_level: String,
+  stressed: { type: Boolean, default: false },
   health: String,
   forward_to: String,
   concerns: String,

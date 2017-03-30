@@ -4,7 +4,7 @@
       <h4 class="interactive-title">Did you get a good night sleep?</h4>
     </div>
     <div class="mdl-cell mdl-grid.center-items vert-div interactive-yes-no horz-div">
-      <form method="POST" class="account-form" action="/entry">
+      <form method="POST" class="account-form" action="/entry3" id="entry3">
         <input type="hidden" name="email" value="{{{user.email}}}"/>
         <div class="">
           <label id="sleep_yes_show" class="mdl-icon-toggle mdl-js-icon-toggle mdl-icon-toggle-interactive-64 yes" for="sleep_yes">
@@ -26,9 +26,7 @@
       <a href="/entry2">
         <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button-back">Back</button>
       </a>
-      <a href="/entry4">
-        <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button">Next</button>
-      </a>
+      <button  type="submit" form="entry3" class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button">Next</button>
     </div>
   </div>
 </div>
