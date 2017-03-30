@@ -305,7 +305,7 @@ exports.postEntrySeven = (req, res, next) => {
         return next(err);
       }
       req.flash('success', { msg: 'Success' });
-      res.redirect('/');
+      res.redirect('/entry8');
     });
   });
 };
