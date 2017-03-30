@@ -115,11 +115,16 @@ app-toolbar {
   min-height:100%;
   /*opacity: 0.7*/
 }
+.entry_five {
+  background: url('../images/22.jpg') center / cover;
+  min-height:100%;
+  /*opacity: 0.7*/
+}
 .card-button {
   min-width: 100px;
 }
 .entry_two {
-  background: url('../images/11.jpg') center / cover; 
+  background: url('../images/11.jpg') center / cover;
   /*background:#FF4081;*/
   min-height:100%;
   /*opacity: 0.85;*/
