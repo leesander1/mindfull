@@ -7,22 +7,18 @@
       <form method="POST" class="account-form" action="/entry">
         <input type="hidden" name="email" value="{{{user.email}}}"/>
         <div class="">
-          <div class="mdl-textfield mdl-js-textfield" id="sleep_hours">
-            <input class="mdl-textfield__input interactive_number" type="number" id="inp_text_01" pattern="-?[0-9]*(\.[0-9]+)?" autofocus>
+          <div class="mdl-textfield mdl-js-textfield" id="sleep">
+            <input class="mdl-textfield__input interactive_number" type="number" id="sleep_hours"  value="{{{entry.sleep.hours}}}" pattern="-?[0-9]*(\.[0-9]+)?" autofocus>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </div>
       </form>
     </div>
-    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top" id="tooltip_yes" data-mdl-for="sleep_yes_show">I feel well rested! 😄</div>
-    <div class="mdl-tooltip mdl-tooltip--large mdl-tooltip--top"id="tooltip_no" data-mdl-for="sleep_no_show">I feel tired and sleepy! 😓</div>
     <div class="interactive-footer">
       <a href="/entry3">
         <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button-back">Back</button>
       </a>
-      <a href="/entry5">
-        <button class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button">Next</button>
-      </a>
+      <button type="submit" form="entry4" class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button">Next</button>
     </div>
   </div>
 </div>

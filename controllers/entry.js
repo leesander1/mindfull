@@ -138,10 +138,10 @@ exports.entryThree = (req, res) => {
 };
 
 /**
- * POST /entry2
+ * POST /entry3
  * Post entry.
  */
-exports.postEntryTwo = (req, res, next) => {
+exports.postEntryThree = (req, res, next) => {
 
   Entry.findOne({
     $and: [
@@ -170,5 +170,34 @@ exports.entryFour = (req, res) => {
   res.render('entry_four', {
     title: 'Hours Slept',
     layout: 'interactive',
+  });
+};
+
+/**
+ * POST /entry4
+ * Post entry.
+ */
+exports.postEntryFour = (req, res, next) => {
+
+  Entry.findOne({
+    $and: [
+         { email: req.body.email },
+         {
+             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+         }
+      ] }, (err, entry) => {
+    if (err) { return next(err); }
+    entry.sleep.hours = req.body.sleep_hours|| '';
+    entry.save((err) => {
+      if (err) {
+        if (err.code === 11000) {
+          req.flash('errors', { msg: 'error' });
+          return res.redirect('/');
+        }
+        return next(err);
+      }
+      req.flash('success', { msg: 'Success' });
+      res.redirect('/');
+    });
   });
 };
