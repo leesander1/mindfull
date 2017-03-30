@@ -17,7 +17,7 @@ const entrySchema = new mongoose.Schema({
   counselling: { type: Boolean, default: false },
   classes: { type: Boolean, default: false },
   homework: { type: Boolean, default: false },
-  worked_out: { type: Boolean, default: false },
+  workedout: { type: Boolean, default: false },
   prayed: { type: Boolean, default: false },
   diet: {
     meals: Number,
