@@ -115,7 +115,6 @@ exports.postEntryTwo = (req, res, next) => {
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
-    entry.feeling.good = req.body.feeling_good || '';
     entry.stressed = req.body.stressed || '';
     entry.save((err) => {
       if (err) {
