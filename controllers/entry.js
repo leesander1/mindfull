@@ -472,11 +472,9 @@ exports.postEntryEleven = (req, res, next) => {
 exports.entryTwelve = (req, res) => {
   res.render('entry_twelve', {
     title: 'Diet',
-    entry_name: 'healthy',
-    entry_title:'Have you been eating healthy?',
+    entry_name: 'caffeine',
+    entry_title:'How many caffeinated beverages have you enjoyed today?',
     form_action:'/entry12',
-    tooltip_yes:'I ate healthy!',
-    tooltip_no:'I could have eaten better',
     last_entry:'/entry11',
     next_entry:'/',
     layout: 'interactive',
