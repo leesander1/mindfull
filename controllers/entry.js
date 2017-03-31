@@ -386,9 +386,9 @@ exports.postEntryNine = (req, res, next) => {
 exports.entryTen = (req, res) => {
   res.render('entry_ten', {
     title: 'digestion',
-    entry_title:'💩🚽?',
+    entry_title:'💩?',
     form_action:'/entry10',
-    tooltip_yes:'Right on!',
+    tooltip_yes:'Right on! 🚽',
     tooltip_no:'Aww that stinks 👃',
     last_entry:'/entry9',
     next_entry:'/',
