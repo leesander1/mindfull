@@ -387,6 +387,7 @@ exports.entryTen = (req, res) => {
   res.render('entry_ten', {
     title: 'digestion',
     entry_title:'💩?',
+    entry_name: 'poop',
     form_action:'/entry10',
     tooltip_yes:'Right on! 🚽',
     tooltip_no:'Aww that stinks 👃',
@@ -411,6 +412,49 @@ exports.postEntryTen = (req, res, next) => {
       ] }, (err, entry) => {
     if (err) { return next(err); }
     entry.digestion = req.body.poop || '';
+    entry.save((err) => {
+      if (err) {
+        if (err.code === 11000) {
+          req.flash('errors', { msg: 'error' });
+          return res.redirect('/');
+        }
+        return next(err);
+      }
+      req.flash('success', { msg: 'Success' });
+      res.redirect('/entry11');
+    });
+  });
+};
+
+exports.entryEleven = (req, res) => {
+  res.render('entry_eleven', {
+    title: 'Diet',
+    entry_name: 'healthy',
+    entry_title:'Have you been eating healthy?',
+    form_action:'/entry11',
+    tooltip_yes:'I ate healthy!',
+    tooltip_no:'I could have eaten better',
+    last_entry:'/entry10',
+    next_entry:'/',
+    layout: 'interactive',
+  });
+};
+
+/**
+ * POST /entry10
+ * Post entry.
+ */
+exports.postEntryEleven = (req, res, next) => {
+
+  Entry.findOne({
+    $and: [
+         { email: req.body.email },
+         {
+             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+         }
+      ] }, (err, entry) => {
+    if (err) { return next(err); }
+    entry.diet.healthy = req.body.healthy || '';
     entry.save((err) => {
       if (err) {
         if (err.code === 11000) {
