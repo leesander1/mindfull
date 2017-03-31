@@ -441,7 +441,7 @@ exports.entryEleven = (req, res) => {
 };
 
 /**
- * POST /entry10
+ * POST /entry11
  * Post entry.
  */
 exports.postEntryEleven = (req, res, next) => {
@@ -455,6 +455,90 @@ exports.postEntryEleven = (req, res, next) => {
       ] }, (err, entry) => {
     if (err) { return next(err); }
     entry.diet.healthy = req.body.healthy || '';
+    entry.save((err) => {
+      if (err) {
+        if (err.code === 11000) {
+          req.flash('errors', { msg: 'error' });
+          return res.redirect('/');
+        }
+        return next(err);
+      }
+      req.flash('success', { msg: 'Success' });
+      res.redirect('/entry12');
+    });
+  });
+};
+
+exports.entryTwelve = (req, res) => {
+  res.render('entry_twelve', {
+    title: 'Diet',
+    entry_name: 'healthy',
+    entry_title:'Have you been eating healthy?',
+    form_action:'/entry12',
+    tooltip_yes:'I ate healthy!',
+    tooltip_no:'I could have eaten better',
+    last_entry:'/entry11',
+    next_entry:'/',
+    layout: 'interactive',
+  });
+};
+
+/**
+ * POST /entry12
+ * Post entry.
+ */
+exports.postEntryTwelve = (req, res, next) => {
+
+  Entry.findOne({
+    $and: [
+         { email: req.body.email },
+         {
+             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+         }
+      ] }, (err, entry) => {
+    if (err) { return next(err); }
+    entry.diet.caffeine = req.body.caffeine || '';
+    entry.save((err) => {
+      if (err) {
+        if (err.code === 11000) {
+          req.flash('errors', { msg: 'error' });
+          return res.redirect('/');
+        }
+        return next(err);
+      }
+      req.flash('success', { msg: 'Success' });
+      res.redirect('/entry13');
+    });
+  });
+};
+
+exports.entryThirteen = (req, res) => {
+  res.render('entry_twelve', {
+    title: 'Diet',
+    entry_name: 'meals',
+    entry_title:'Have many meals did you have today?',
+    form_action:'/entry13',
+    last_entry:'/entry12',
+    next_entry:'/',
+    layout: 'interactive',
+  });
+};
+
+/**
+ * POST /entry13
+ * Post entry.
+ */
+exports.postEntryThirteen = (req, res, next) => {
+
+  Entry.findOne({
+    $and: [
+         { email: req.body.email },
+         {
+             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+         }
+      ] }, (err, entry) => {
+    if (err) { return next(err); }
+    entry.diet.meals = req.body.meals || '';
     entry.save((err) => {
       if (err) {
         if (err.code === 11000) {

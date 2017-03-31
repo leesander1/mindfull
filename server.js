@@ -159,7 +159,10 @@ app.get('/entry10', passportConfig.isAuthenticated, entryController.entryTen);
 app.post('/entry10', passportConfig.isAuthenticated, entryController.postEntryTen);
 app.get('/entry11', passportConfig.isAuthenticated, entryController.entryEleven);
 app.post('/entry11', passportConfig.isAuthenticated, entryController.postEntryEleven);
-
+app.get('/entry12', passportConfig.isAuthenticated, entryController.entryTwelve);
+app.post('/entry12', passportConfig.isAuthenticated, entryController.postEntryTwelve);
+app.get('/entry13', passportConfig.isAuthenticated, entryController.entryThirteen);
+app.post('/entry13', passportConfig.isAuthenticated, entryController.postEntryThirteen);
  /**
   * OAuth authentication routes. (Sign in)
   */
