@@ -32,10 +32,11 @@ dotenv.load({ path: '.env' });
  */
 const homeController = require('./controllers/home');
 const userController = require('./controllers/user');
+const entryController = require('./controllers/entry');
 const notificationController = require('./controllers/notification');
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
-const entryController = require('./controllers/entry');
+
 
 /**
  * API keys and Passport configuration.
@@ -108,7 +109,6 @@ app.use((req, res, next) => {
   }
   next();
 });
-
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
 
 
@@ -131,12 +131,12 @@ app.post('/account/profile', passportConfig.isAuthenticated, userController.post
 app.post('/account/password', passportConfig.isAuthenticated, userController.postUpdatePassword);
 app.post('/account/delete', passportConfig.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink);
-
 app.get('/notification', passportConfig.isAuthenticated, notificationController.getNotification);
 app.post('/notification/update', passportConfig.isAuthenticated, notificationController.postUpdateNotification);
-
 app.get('/entry', passportConfig.isAuthenticated, entryController.newEntry);
 app.post('/entry', passportConfig.isAuthenticated, entryController.postNewEntry);
+app.get('/am', passportConfig.isAuthenticated, entryController.medMorning);
+app.post('/am', passportConfig.isAuthenticated, entryController.postMedMorning);
 app.get('/entry1', passportConfig.isAuthenticated, entryController.entryOne);
 app.post('/entry1', passportConfig.isAuthenticated, entryController.postEntryOne);
 app.get('/entry2', passportConfig.isAuthenticated, entryController.entryTwo);
