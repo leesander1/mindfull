@@ -691,9 +691,11 @@ exports.postEntryFinish = (req, res, next) => {
     if (err) { return next(err); }
     const message = {
       to: req.body.phone,
-      from: '+15005550006',
+      from: '+14692082397',
       body: 'homework: ' + entry.homework
     };
+    console.log(message.to);
+    console.log(req.body.phone);
     twilio.sendMessage(message, (err, responseData) => {
       if (err) { return next(err.message); }
       req.flash('success', { msg: `Text sent to ${responseData.to}.` });
