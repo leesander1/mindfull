@@ -16,14 +16,6 @@ module.exports = {
       'views/layouts/main.hbs',
       'views/home.hbs'
     ],
-    '/login': [
-      'views/layouts/main.hbs',
-      'views/login.hbs'
-    ],
-    '/signup': [
-      'views/layouts/main.hbs',
-      'views/signup.hbs'
-    ],
     '/notification': [
       'views/layouts/main.hbs',
       'views/notification.hbs'
