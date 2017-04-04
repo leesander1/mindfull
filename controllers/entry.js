@@ -690,7 +690,7 @@ exports.postEntryFinish = (req, res, next) => {
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
-    let body_raw = {
+    const body_raw = {
       text: req.body.name + ', ' + 'here is the entry for ' + today +'\n'+
       '❗ Stress: ' + entry.stressed + '\n'+
       '💊 Morning Medicine: ' + entry.med_morning + '\n'+
@@ -707,12 +707,12 @@ exports.postEntryFinish = (req, res, next) => {
       '🎒 School: ' + entry.classes + '\n'+
       '📔 Counselling: ' + entry.counselling + '\n'
     };
-    replaceall("true", "✔️", body_raw.text);
-    replaceall("false", "❌", body_raw.text);
+    const body1 = replaceall("true", "✔️", body_raw.text);
+    const body_readable = replaceall("false", "❌", body1);
     const message =  {
       to: req.body.phone,
       from: '+14692082397',
-      body: body_raw.text
+      body: body_readable
     };
     console.log(message.to);
     twilio.sendMessage(message, (err, responseData) => {
