@@ -5,6 +5,7 @@ const Entry = require('../models/Entry');
 
 
 
+
 /**
  * GET /entry
  * Entry page.
@@ -23,7 +24,9 @@ exports.newEntry = (req, res) => {
  * Post entry.
  */
 exports.postNewEntry = (req, res, next) => {
-
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
+  
   const entry = new Entry({
     email: req.body.email,
     name: req.body.name,
@@ -35,7 +38,7 @@ exports.postNewEntry = (req, res, next) => {
     $and: [
          { email: req.body.email },
          {
-             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+             createdAt: {$gte: start, $lt: end}
          }
       ] }, (err, existingDate) => {
     if (err) {
