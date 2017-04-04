@@ -116,8 +116,7 @@ app-toolbar {
   /*opacity: 0.7*/
 }
 .entry_color {
-  /*background: url('../images/14.jpg') center / cover;*/
-  background: url('../images/24.jpg') center / cover;
+  background: url('../images/17.jpg') center / cover;
   min-height:100%;
   /*opacity: 0.7*/
 }
@@ -129,7 +128,7 @@ app-toolbar {
 .entry_am {
   background: url('../images/45.png') center / cover;
   min-height:100%;
-  /*opacity: 0.7*/
+  color:white;
 }
 .entry_pm {
   background: url('../images/44.jpg') center / cover;
@@ -197,6 +196,8 @@ app-toolbar {
 }
 .interactive-title {
   text-align:center;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .mdl-icon-toggle-interactive {
   height: 36px!important;

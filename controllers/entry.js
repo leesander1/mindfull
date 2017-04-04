@@ -91,11 +91,11 @@ exports.postMedMorning = (req, res, next) => {
       return next(err); }
     if (existingDate) {
       req.flash('errors', { msg: 'Error' });
-      return res.redirect('/am');
+      return res.redirect('/');
     }
     entry.save((err) => {
       if (err) { return next(err); }
-      res.redirect('/am');
+      res.redirect('/');
     });
   });
 };
