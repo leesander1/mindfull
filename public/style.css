@@ -126,6 +126,16 @@ app-toolbar {
   min-height:100%;
   /*opacity: 0.7*/
 }
+.entry_am {
+  background: url('../images/45.jpg') center / cover;
+  min-height:100%;
+  /*opacity: 0.7*/
+}
+.entry_pm {
+  background: url('../images/44.jpg') center / cover;
+  min-height:100%;
+  /*opacity: 0.7*/
+}
 .entry_eleven {
   background: url('../images/72.jpg') center / cover;
   min-height:100%;
