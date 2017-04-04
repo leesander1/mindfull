@@ -13,35 +13,35 @@
 module.exports = {
   dynamicUrlToDependencies: {
     '/': [
-      'views/layout/main.hbs',
+      'views/layouts/main.hbs',
       'views/home.hbs'
     ],
     '/login': [
-      'views/layout/main.hbs',
+      'views/layouts/main.hbs',
       'views/login.hbs'
     ],
     '/signup': [
-      'views/layout/main.hbs',
+      'views/layouts/main.hbs',
       'views/signup.hbs'
     ],
     '/notification': [
-      'views/layout/main.hbs',
+      'views/layouts/main.hbs',
       'views/notification.hbs'
     ],
     '/account': [
-      'views/layout/main.hbs',
+      'views/layouts/main.hbs',
       'views/profile.hbs'
     ],
     '/entry': [
-      'views/layout/interactive.hbs',
+      'views/layouts/interactive.hbs',
       'views/entry.hbs'
     ],
     '/entry1': [
-      'views/layout/interactive.hbs',
+      'views/layouts/interactive.hbs',
       'views/entry_one.hbs'
     ],
     '/entry2': [
-      'views/layout/interactive.hbs',
+      'views/layouts/interactive.hbs',
       'views/entry_two.hbs'
     ]
   },
