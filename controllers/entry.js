@@ -39,7 +39,7 @@ exports.postNewEntry = (req, res, next) => {
       return next(err); }
     if (existingDate) {
       req.flash('errors', { msg: 'Entry for today already exists.' });
-      return res.redirect('/entry');
+      return res.redirect('/entry1');
     }
     entry.save((err) => {
       if (err) { return next(err); }
@@ -67,7 +67,7 @@ exports.postEntryOne = (req, res, next) => {
     $and: [
          { email: req.body.email },
          {
-             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+             createdAt: {$gte: start, $lt: end}
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
@@ -111,7 +111,7 @@ exports.postEntryTwo = (req, res, next) => {
     $and: [
          { email: req.body.email },
          {
-             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+             createdAt: {$gte: start, $lt: end}
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
@@ -149,7 +149,7 @@ exports.postEntryThree = (req, res, next) => {
     $and: [
          { email: req.body.email },
          {
-             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+             createdAt: {$gte: start, $lt: end}
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
@@ -186,7 +186,7 @@ exports.postEntryFour = (req, res, next) => {
     $and: [
          { email: req.body.email },
          {
-             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+             createdAt: {$gte: start, $lt: end}
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
@@ -224,7 +224,7 @@ exports.postEntryFive = (req, res, next) => {
     $and: [
          { email: req.body.email },
          {
-             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+             createdAt: {$gte: start, $lt: end}
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
@@ -261,7 +261,7 @@ exports.postEntrySix = (req, res, next) => {
     $and: [
          { email: req.body.email },
          {
-             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+             createdAt: {$gte: start, $lt: end}
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
@@ -298,7 +298,7 @@ exports.postEntrySeven = (req, res, next) => {
     $and: [
          { email: req.body.email },
          {
-             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+             createdAt: {$gte: start, $lt: end}
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
@@ -335,7 +335,7 @@ exports.postEntryEight = (req, res, next) => {
     $and: [
          { email: req.body.email },
          {
-             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+             createdAt: {$gte: start, $lt: end}
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
@@ -372,7 +372,7 @@ exports.postEntryNine = (req, res, next) => {
     $and: [
          { email: req.body.email },
          {
-             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+             createdAt: {$gte: start, $lt: end}
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
@@ -416,7 +416,7 @@ exports.postEntryTen = (req, res, next) => {
     $and: [
          { email: req.body.email },
          {
-             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+             createdAt: {$gte: start, $lt: end}
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
@@ -460,7 +460,7 @@ exports.postEntryEleven = (req, res, next) => {
     $and: [
          { email: req.body.email },
          {
-             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+             createdAt: {$gte: start, $lt: end}
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
@@ -502,7 +502,7 @@ exports.postEntryTwelve = (req, res, next) => {
     $and: [
          { email: req.body.email },
          {
-             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+             createdAt: {$gte: start, $lt: end}
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
@@ -544,7 +544,7 @@ exports.postEntryThirteen = (req, res, next) => {
     $and: [
          { email: req.body.email },
          {
-             createdAt: { $gt: new Date(Date.now() - (1000 * 60 * 60 * 24)) }
+             createdAt: {$gte: start, $lt: end}
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
