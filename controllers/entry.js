@@ -680,7 +680,7 @@ exports.entryFinish = (req, res) => {
 exports.postEntryFinish = (req, res, next) => {
   let start = moment().startOf('day'); // set to 12:00 am today
   let end = moment().endOf('day'); // set to 23:59 pm today
-
+  let today = moment().format("MMM Do YY");
   Entry.findOne({
     $and: [
          { email: req.body.email },
@@ -692,7 +692,21 @@ exports.postEntryFinish = (req, res, next) => {
     const message = {
       to: req.body.phone,
       from: '+14692082397',
-      body: 'homework: ' + entry.homework
+      body: entry.name + ', ' + 'here is the entry for ' + today +'\n'+
+      '❗ Stress: ' + entry.stessed + '\n'+
+      '💊 Morning Medicine: ' + entry.med_morning + '\n'+
+      '💊 Evening Medicine: ' + entry.med_evening + '\n'+
+      '🛌 Sleep Quality: ' + entry.sleep.quality + '\n'+
+      '💤 Sleep Hours: ' + entry.sleep.hours + '\n'+
+      '📚 Homework: ' + entry.homework + '\n'+
+      '💩 Digestion: ' + entry.digestion + '\n'+
+      '🍜 Eat Healthy: ' + entry.diet.healthy + '\n'+
+      '☕ Caffeine: ' + entry.diet.caffeine + '\n'+
+      '🍴 Meals: ' + entry.diet.meals + '\n'+
+      '⛪ Prayed: ' + entry.prayed + '\n'+
+      '💪 Gym: ' + entry.workedout + '\n'+
+      '🎒 School: ' + entry.classes + '\n'+
+      '📔 Counselling: ' + entry.counselling + '\n'+
     };
     console.log(message.to);
     console.log(req.body.phone);
