@@ -2,6 +2,7 @@ const moment = require('moment');
 const nodemailer = require('nodemailer');
 const async = require('async');
 const Entry = require('../models/Entry');
+const User = require('../models/User');
 
 
 
@@ -19,14 +20,10 @@ exports.newEntry = (req, res) => {
   });
 };
 
-/**
- * POST /entry
- * Post entry.
- */
 exports.postNewEntry = (req, res, next) => {
   let start = moment().startOf('day'); // set to 12:00 am today
   let end = moment().endOf('day'); // set to 23:59 pm today
-  
+
   const entry = new Entry({
     email: req.body.email,
     name: req.body.name,
@@ -54,6 +51,10 @@ exports.postNewEntry = (req, res, next) => {
   });
 };
 
+/**
+ * Entry 1 page.
+ */
+
 exports.entryOne = (req, res) => {
   res.render('entry_one', {
     title: 'How are you feeling?',
@@ -61,11 +62,9 @@ exports.entryOne = (req, res) => {
   });
 };
 
-/**
- * POST /entry1
- * Post entry.
- */
 exports.postEntryOne = (req, res, next) => {
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
 
   Entry.findOne({
     $and: [
@@ -96,6 +95,10 @@ exports.postEntryOne = (req, res, next) => {
   });
 };
 
+/**
+ * Entry 2 page.
+ */
+
 exports.entryTwo = (req, res) => {
   res.render('entry_two', {
     title: 'Stress Level',
@@ -103,12 +106,9 @@ exports.entryTwo = (req, res) => {
   });
 };
 
-
-/**
- * POST /entry2
- * Post entry.
- */
 exports.postEntryTwo = (req, res, next) => {
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
 
   Entry.findOne({
     $and: [
@@ -133,6 +133,10 @@ exports.postEntryTwo = (req, res, next) => {
   });
 };
 
+/**
+ * Entry 3 page.
+ */
+
 exports.entryThree = (req, res) => {
   res.render('entry_three', {
     title: 'Sleep Quality',
@@ -140,11 +144,9 @@ exports.entryThree = (req, res) => {
   });
 };
 
-/**
- * POST /entry3
- * Post entry.
- */
 exports.postEntryThree = (req, res, next) => {
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
 
   Entry.findOne({
     $and: [
@@ -169,6 +171,9 @@ exports.postEntryThree = (req, res, next) => {
   });
 };
 
+/**
+ * Entry 4 page.
+ */
 exports.entryFour = (req, res) => {
   res.render('entry_four', {
     title: 'Hours Slept',
@@ -176,11 +181,9 @@ exports.entryFour = (req, res) => {
   });
 };
 
-/**
- * POST /entry4
- * Post entry.
- */
 exports.postEntryFour = (req, res, next) => {
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
 
   Entry.findOne({
     $and: [
@@ -205,6 +208,10 @@ exports.postEntryFour = (req, res, next) => {
   });
 };
 
+/**
+ * Entry 5 page.
+ */
+
 exports.entryFive = (req, res) => {
   res.render('entry_five', {
     title: 'Class',
@@ -212,11 +219,9 @@ exports.entryFive = (req, res) => {
   });
 };
 
-/**
- * POST /entry5
- * Post entry.
- */
 exports.postEntryFive = (req, res, next) => {
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
 
   Entry.findOne({
     $and: [
@@ -241,6 +246,9 @@ exports.postEntryFive = (req, res, next) => {
   });
 };
 
+/**
+ * Entry 6 page.
+ */
 exports.entrySix = (req, res) => {
   res.render('entry_six', {
     title: 'Homework',
@@ -248,11 +256,9 @@ exports.entrySix = (req, res) => {
   });
 };
 
-/**
- * POST /entry6
- * Post entry.
- */
 exports.postEntrySix = (req, res, next) => {
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
 
   Entry.findOne({
     $and: [
@@ -277,6 +283,9 @@ exports.postEntrySix = (req, res, next) => {
   });
 };
 
+/**
+ * Entry 7 page.
+ */
 exports.entrySeven = (req, res) => {
   res.render('entry_seven', {
     title: 'Work Out',
@@ -284,11 +293,9 @@ exports.entrySeven = (req, res) => {
   });
 };
 
-/**
- * POST /entry7
- * Post entry.
- */
 exports.postEntrySeven = (req, res, next) => {
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
 
   Entry.findOne({
     $and: [
@@ -313,6 +320,9 @@ exports.postEntrySeven = (req, res, next) => {
   });
 };
 
+/**
+ * Entry 8 page.
+ */
 exports.entryEight = (req, res) => {
   res.render('entry_eight', {
     title: 'counselling',
@@ -320,11 +330,9 @@ exports.entryEight = (req, res) => {
   });
 };
 
-/**
- * POST /entry8
- * Post entry.
- */
 exports.postEntryEight = (req, res, next) => {
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
 
   Entry.findOne({
     $and: [
@@ -349,7 +357,9 @@ exports.postEntryEight = (req, res, next) => {
   });
 };
 
-
+/**
+ * Entry 9 page.
+ */
 exports.entryNine = (req, res) => {
   res.render('entry_nine', {
     title: 'Prayer',
@@ -357,11 +367,9 @@ exports.entryNine = (req, res) => {
   });
 };
 
-/**
- * POST /entry9
- * Post entry.
- */
 exports.postEntryNine = (req, res, next) => {
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
 
   Entry.findOne({
     $and: [
@@ -386,6 +394,9 @@ exports.postEntryNine = (req, res, next) => {
   });
 };
 
+/**
+ * Entry 10 page.
+ */
 exports.entryTen = (req, res) => {
   res.render('entry_ten', {
     title: 'digestion',
@@ -400,11 +411,9 @@ exports.entryTen = (req, res) => {
   });
 };
 
-/**
- * POST /entry10
- * Post entry.
- */
 exports.postEntryTen = (req, res, next) => {
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
 
   Entry.findOne({
     $and: [
@@ -429,6 +438,9 @@ exports.postEntryTen = (req, res, next) => {
   });
 };
 
+/**
+ * Entry 11 page.
+ */
 exports.entryEleven = (req, res) => {
   res.render('entry_eleven', {
     title: 'Diet',
@@ -443,11 +455,9 @@ exports.entryEleven = (req, res) => {
   });
 };
 
-/**
- * POST /entry11
- * Post entry.
- */
 exports.postEntryEleven = (req, res, next) => {
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
 
   Entry.findOne({
     $and: [
@@ -472,6 +482,9 @@ exports.postEntryEleven = (req, res, next) => {
   });
 };
 
+/**
+ * Entry 12 page.
+ */
 exports.entryTwelve = (req, res) => {
   res.render('entry_twelve', {
     title: 'Diet',
@@ -484,11 +497,9 @@ exports.entryTwelve = (req, res) => {
   });
 };
 
-/**
- * POST /entry12
- * Post entry.
- */
 exports.postEntryTwelve = (req, res, next) => {
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
 
   Entry.findOne({
     $and: [
@@ -513,6 +524,9 @@ exports.postEntryTwelve = (req, res, next) => {
   });
 };
 
+/**
+ * Entry 13 page.
+ */
 exports.entryThirteen = (req, res) => {
   res.render('entry_twelve', {
     title: 'Diet',
@@ -525,12 +539,10 @@ exports.entryThirteen = (req, res) => {
   });
 };
 
-/**
- * POST /entry13
- * Post entry.
- */
 exports.postEntryThirteen = (req, res, next) => {
-
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
+  
   Entry.findOne({
     $and: [
          { email: req.body.email },

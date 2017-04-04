@@ -53,7 +53,6 @@ module.exports = {
     '/bower_components/webcomponentsjs/webcomponents-lite.min.js',
     '/bower_components/*',
   ],
-  navigateFallback: 'index.html',
   verbose: true,
   runtimeCaching: [{
   urlPattern: /this\\.is\\.a\\.regex/,
