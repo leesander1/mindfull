@@ -689,11 +689,9 @@ exports.postEntryFinish = (req, res, next) => {
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
-    const message = {
-      to: req.body.phone,
-      from: '+14692082397',
-      body: entry.name + ', ' + 'here is the entry for ' + today +'\n'+
-      '❗ Stress: ' + entry.stessed + '\n'+
+    const body_raw = {
+      req.body.name + ', ' + 'here is the entry for ' + today +'\n'+
+      '❗ Stress: ' + entry.stressed + '\n'+
       '💊 Morning Medicine: ' + entry.med_morning + '\n'+
       '💊 Evening Medicine: ' + entry.med_evening + '\n'+
       '🛌 Sleep Quality: ' + entry.sleep.quality + '\n'+
@@ -708,8 +706,13 @@ exports.postEntryFinish = (req, res, next) => {
       '🎒 School: ' + entry.classes + '\n'+
       '📔 Counselling: ' + entry.counselling + '\n'
     };
+    const body_readable = body_raw.replace("true", "✔️").replace("false", "❌");
+    const message =  {
+      to: req.body.phone,
+      from: '+14692082397',
+      body: body_readable
+    };
     console.log(message.to);
-    console.log(req.body.phone);
     twilio.sendMessage(message, (err, responseData) => {
       if (err) { return next(err.message); }
       req.flash('success', { msg: `Text sent to ${responseData.to}.` });
