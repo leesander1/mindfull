@@ -4,6 +4,7 @@ const async = require('async');
 const Entry = require('../models/Entry');
 const User = require('../models/User');
 const twilio = require('twilio')(process.env.TWILIO_SID, process.env.TWILIO_TOKEN);
+const replaceall = require("replaceall");
 
 /**
  * GET /entry
@@ -689,7 +690,7 @@ exports.postEntryFinish = (req, res, next) => {
          }
       ] }, (err, entry) => {
     if (err) { return next(err); }
-    const body_raw = {
+    let body_raw = {
       text: req.body.name + ', ' + 'here is the entry for ' + today +'\n'+
       '❗ Stress: ' + entry.stressed + '\n'+
       '💊 Morning Medicine: ' + entry.med_morning + '\n'+
@@ -706,11 +707,12 @@ exports.postEntryFinish = (req, res, next) => {
       '🎒 School: ' + entry.classes + '\n'+
       '📔 Counselling: ' + entry.counselling + '\n'
     };
-    const body_readable = body_raw.text.replace("true", "✔️").replace("false", "❌");
+    replaceall("true", "✔️", body_raw.text);
+    replaceall("false", "❌", body_raw.text);
     const message =  {
       to: req.body.phone,
       from: '+14692082397',
-      body: body_readable
+      body: body_raw.text
     };
     console.log(message.to);
     twilio.sendMessage(message, (err, responseData) => {
