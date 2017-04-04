@@ -690,7 +690,7 @@ exports.postEntryFinish = (req, res, next) => {
       ] }, (err, entry) => {
     if (err) { return next(err); }
     const message = {
-      to: entry.number,
+      to: req.body.phone,
       from: '+15005550006',
       body: 'homework: ' + entry.homework
     };
