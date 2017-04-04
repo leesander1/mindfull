@@ -538,7 +538,7 @@ exports.entryTwelve = (req, res) => {
   res.render('entry_twelve', {
     title: 'Diet',
     entry_name: 'caffeine',
-    entry_title:'How many caffeinated beverages have you enjoyed today?',
+    entry_title:'Caffeine intake?',
     form_action:'/entry12',
     last_entry:'/entry11',
     next_entry:'/',
