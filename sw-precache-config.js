@@ -11,28 +11,7 @@
 /* eslint-env node */
 
 module.exports = {
-  dynamicUrlToDependencies: {
-    '/notification': [
-      'views/layouts/main.hbs',
-      'views/notification.hbs'
-    ],
-    '/account': [
-      'views/layouts/main.hbs',
-      'views/profile.hbs'
-    ],
-    '/entry': [
-      'views/layouts/interactive.hbs',
-      'views/entry.hbs'
-    ],
-    '/entry1': [
-      'views/layouts/interactive.hbs',
-      'views/entry_one.hbs'
-    ],
-    '/entry2': [
-      'views/layouts/interactive.hbs',
-      'views/entry_two.hbs'
-    ]
-  },
+  
   staticFileGlobs: [
     '/public',
     '/manifest.json',
