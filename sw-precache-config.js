@@ -11,7 +11,12 @@
 /* eslint-env node */
 
 module.exports = {
-  
+  dynamicUrlToDependencies: {
+    '/': [
+      'views/layouts/main.hbs',
+      'views/home.hbs'
+    ]
+  },
   staticFileGlobs: [
     '/public',
     '/manifest.json',
