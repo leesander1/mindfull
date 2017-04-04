@@ -690,7 +690,7 @@ exports.postEntryFinish = (req, res, next) => {
       ] }, (err, entry) => {
     if (err) { return next(err); }
     const body_raw = {
-      req.body.name + ', ' + 'here is the entry for ' + today +'\n'+
+      text: req.body.name + ', ' + 'here is the entry for ' + today +'\n'+
       '❗ Stress: ' + entry.stressed + '\n'+
       '💊 Morning Medicine: ' + entry.med_morning + '\n'+
       '💊 Evening Medicine: ' + entry.med_evening + '\n'+
@@ -706,7 +706,7 @@ exports.postEntryFinish = (req, res, next) => {
       '🎒 School: ' + entry.classes + '\n'+
       '📔 Counselling: ' + entry.counselling + '\n'
     };
-    const body_readable = body_raw.replace("true", "✔️").replace("false", "❌");
+    const body_readable = body_raw.text.replace("true", "✔️").replace("false", "❌");
     const message =  {
       to: req.body.phone,
       from: '+14692082397',
