@@ -60,6 +60,8 @@ exports.medMorning = (req, res) => {
     entry_name: 'med_morning',
     entry_title:'Have you taken your medicine this morning?',
     form_action:'/am',
+    tooltip_yes:'Great!',
+    tooltip_no:'Take them before you forget!',
     last_entry:'/',
     next_entry:'/',
     layout: 'interactive',
