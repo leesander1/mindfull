@@ -673,6 +673,7 @@ exports.entryFinish = (req, res) => {
     title: 'Complete',
     entry_title:'Submit',
     form_action:'/done',
+    layout: 'interactive',
   });
 };
 
