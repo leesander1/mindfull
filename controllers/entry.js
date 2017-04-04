@@ -4,9 +4,6 @@ const async = require('async');
 const Entry = require('../models/Entry');
 const User = require('../models/User');
 
-
-
-
 /**
  * GET /entry
  * Entry page.
@@ -542,7 +539,7 @@ exports.entryThirteen = (req, res) => {
 exports.postEntryThirteen = (req, res, next) => {
   let start = moment().startOf('day'); // set to 12:00 am today
   let end = moment().endOf('day'); // set to 23:59 pm today
-  
+
   Entry.findOne({
     $and: [
          { email: req.body.email },
