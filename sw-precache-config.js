@@ -12,10 +12,6 @@
 
 module.exports = {
   dynamicUrlToDependencies: {
-    '/': [
-      'views/layouts/main.hbs',
-      'views/home.hbs'
-    ],
     '/notification': [
       'views/layouts/main.hbs',
       'views/notification.hbs'
