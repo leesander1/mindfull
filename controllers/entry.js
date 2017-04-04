@@ -706,7 +706,7 @@ exports.postEntryFinish = (req, res, next) => {
       '⛪ Prayed: ' + entry.prayed + '\n'+
       '💪 Gym: ' + entry.workedout + '\n'+
       '🎒 School: ' + entry.classes + '\n'+
-      '📔 Counselling: ' + entry.counselling + '\n'+
+      '📔 Counselling: ' + entry.counselling + '\n'
     };
     console.log(message.to);
     console.log(req.body.phone);
