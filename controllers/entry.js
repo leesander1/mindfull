@@ -3,6 +3,7 @@ const nodemailer = require('nodemailer');
 const async = require('async');
 const Entry = require('../models/Entry');
 const User = require('../models/User');
+const twilio = require('twilio')(process.env.TWILIO_SID, process.env.TWILIO_TOKEN);
 
 /**
  * GET /entry
@@ -662,6 +663,39 @@ exports.postEntryThirteen = (req, res, next) => {
         return next(err);
       }
       req.flash('success', { msg: 'Success' });
+      res.redirect('/done');
+    });
+  });
+};
+
+exports.entryFinish = (req, res) => {
+  res.render('entry_done', {
+    title: 'Complete',
+    entry_title:'Submit',
+    form_action:'/done',
+  });
+};
+
+exports.postEntryFinish = (req, res, next) => {
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
+
+  Entry.findOne({
+    $and: [
+         { email: req.body.email },
+         {
+             createdAt: {$gte: start, $lt: end}
+         }
+      ] }, (err, entry) => {
+    if (err) { return next(err); }
+    const message = {
+      to: entry.number,
+      from: '+15005550006',
+      body: 'homework: ' + entry.homework
+    };
+    twilio.sendMessage(message, (err, responseData) => {
+      if (err) { return next(err.message); }
+      req.flash('success', { msg: `Text sent to ${responseData.to}.` });
       res.redirect('/');
     });
   });

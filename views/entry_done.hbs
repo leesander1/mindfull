@@ -1,0 +1,17 @@
+<div class="vs entry_pm">
+  <div class="mdl-grid content-grid vs vert-div">
+    <div class="mdl-cell mdl-grid.center-items vert-div">
+      <h4 class="interactive-title">{{{entry_title}}}</h4>
+    </div>
+    <div class="mdl-cell mdl-grid.center-items vert-div interactive-yes-no horz-div">
+      <form method="POST" class="account-form" action="{{{form_action}}}" id="entry">
+        <input type="hidden" name="email" value="{{{user.email}}}"/>
+        <div class="">
+        </div>
+      </form>
+    </div>
+    <div class="interactive-footer">
+      <button type="submit" form="entry" class="mdl-button mdl-js-button mdl-button--accent mdl-button--white interactive-button">Done</button>
+    </div>
+  </div>
+</div>

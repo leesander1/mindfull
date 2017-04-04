@@ -139,6 +139,8 @@ app.get('/am', passportConfig.isAuthenticated, entryController.medMorning);
 app.post('/am', passportConfig.isAuthenticated, entryController.postMedMorning);
 app.get('/pm', passportConfig.isAuthenticated, entryController.medEvening);
 app.post('/pm', passportConfig.isAuthenticated, entryController.postMedEvening);
+app.get('/done', passportConfig.isAuthenticated, entryController.entryFinish);
+app.post('/done', passportConfig.isAuthenticated, entryController.postEntryFinish);
 app.get('/entry1', passportConfig.isAuthenticated, entryController.entryOne);
 app.post('/entry1', passportConfig.isAuthenticated, entryController.postEntryOne);
 app.get('/entry2', passportConfig.isAuthenticated, entryController.entryTwo);
