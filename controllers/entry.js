@@ -707,8 +707,8 @@ exports.postEntryFinish = (req, res, next) => {
       '🎒 School: ' + entry.classes + '\n'+
       '📔 Counselling: ' + entry.counselling + '\n'
     };
-    const body1 = replaceall("true", "✔️", body_raw.text);
-    const body_readable = replaceall("false", "❌", body1);
+    const body1 = replaceall("true", "✔️ (yes)", body_raw.text);
+    const body_readable = replaceall("false", "❌ (no)", body1);
     const message =  {
       to: req.body.phone,
       from: '+14692082397',
