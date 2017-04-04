@@ -101,6 +101,58 @@ exports.postMedMorning = (req, res, next) => {
 };
 
 /**
+ * GET /entry
+ * Entry meds page.
+ */
+
+exports.medEvening = (req, res) => {
+  let date = moment().format("MMM Do YY");
+  res.render('med_morning', {
+    title: 'Evening Medication',
+    entry_name: 'med_evening',
+    entry_title:'Have you taken your medicine this evening?',
+    form_action:'/pm',
+    tooltip_yes:'Great!',
+    tooltip_no:'Take them before bed! 🛏️',
+    last_entry:'/',
+    next_entry:'/',
+    layout: 'interactive',
+    day: date,
+  });
+};
+
+exports.postMedEvening = (req, res, next) => {
+  let start = moment().startOf('day'); // set to 12:00 am today
+  let end = moment().endOf('day'); // set to 23:59 pm today
+
+  const entry = new Entry({
+    email: req.body.email,
+    name: req.body.name,
+    phone: req.body.phone,
+    date: Date()
+  });
+
+  Entry.findOne({
+    $and: [
+         { email: req.body.email },
+         {
+             createdAt: {$gte: start, $lt: end}
+         }
+      ] }, (err, existingDate) => {
+    if (err) {
+      return next(err); }
+    if (existingDate) {
+      req.flash('errors', { msg: 'Error' });
+      return res.redirect('/');
+    }
+    entry.save((err) => {
+      if (err) { return next(err); }
+      res.redirect('/');
+    });
+  });
+};
+
+/**
  * Entry 1 page.
  */
 
