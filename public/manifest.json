@@ -1,6 +1,6 @@
 {
-  "short_name": "Sander App",
-  "name": "leesander.com",
+  "short_name": "mindfullee",
+  "name": "A smarter way to be healthy",
   "start_url": "./?utm_source=web_app_manifest",
   "icons": [
     {
@@ -9,8 +9,8 @@
       "type": "image/png"
     }
   ],
-  "background_color": "rgb(233,30,99)",
-  "theme_color": "rgb(233,30,99)",
+  "background_color": "#90A4AE",
+  "theme_color": "#009688",
   "display": "standalone",
   "orientation": "portrait",
   "gcm_sender_id": "",
