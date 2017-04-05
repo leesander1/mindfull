@@ -7,7 +7,7 @@ const User = require('../models/User');
 
 exports.pushMorning = () => {
   console.log('Morning push started...');
-  User.find({notification.morning:{$eq: true}}, (err, user) => {
+  User.where({ notification: {morning:{$eq: true}}}, (err, user) => {
   console.log(user);
     if (err) { return next(err); }
     const message =  {
