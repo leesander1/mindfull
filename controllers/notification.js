@@ -13,6 +13,7 @@ exports.pushMorning = () => {
     if (err) { return next(err); }
     //numbers.push(user.profile.phone);
   });
+  /**
   const message =  {
     to: numbers[0],
     from: '+14692082397',
@@ -21,7 +22,7 @@ exports.pushMorning = () => {
   twilio.sendMessage(message, (err, responseData) => {
     if (err) { return next(err.message); }
     console.log('Morning push successful.');
-  });
+  }); */
 };
 
 exports.pushEvening = () => {
