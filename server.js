@@ -181,7 +181,7 @@ app.post('/entry13', passportConfig.isAuthenticated, entryController.postEntryTh
   */
  app.use(errorHandler());
 
- new cronJob( '30 08 * * *', function(){
+ new cronJob( '* * * * *', function(){
    notificationController.pushMorning();
  },  null, true,'America/Los_Angeles');
 
