@@ -181,11 +181,13 @@ app.post('/entry13', passportConfig.isAuthenticated, entryController.postEntryTh
   */
  app.use(errorHandler());
 
- let textJob = new cronJob( '* * * * *', function(){
+ new cronJob( '30 08 * * *', function(){
    notificationController.pushMorning();
-   console.log('textjob..');
- },  null, true);
+ },  null, true,'America/Los_Angeles');
 
+ new cronJob( '30 20 * * *', function(){
+   notificationController.pushEvening();
+ },  null, true,'America/Los_Angeles');
 
  /**
  * Start Express server.
