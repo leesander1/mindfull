@@ -181,18 +181,19 @@ app.post('/entry13', passportConfig.isAuthenticated, entryController.postEntryTh
   */
  app.use(errorHandler());
 
+ let textJob = new cronJob( '3 * * * *', function(){
+   notificationController.pushMorning();
+   console.log('textjob..');
+ },  null, true);
+
+
  /**
  * Start Express server.
  */
+
 app.listen(app.get('port'), () => {
   console.log('%s App is running at http://localhost:%d in %s mode', chalk.green('✓'), app.get('port'), app.get('env'));
   console.log('  Press CTRL-C to stop\n');
 });
-
-
-let textJob = new cronJob( '3 * * * *', function(){
-  notificationController.pushMorning();
-  console.log('textjob..');
-},  null, true);
 
 module.exports = app;
