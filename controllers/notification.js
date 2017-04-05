@@ -14,7 +14,7 @@ exports.pushMorning = () => {
     //numbers.push(user.profile.phone);
   });
   const message =  {
-    to: numbers[1],
+    to: numbers[0],
     from: '+14692082397',
     body: 'Good Morning'
   };
