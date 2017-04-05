@@ -7,18 +7,20 @@ const User = require('../models/User');
 
 exports.pushMorning = () => {
   console.log('Morning push started...');
+  let numbers = ['4698773526'];
   User.find({ notification: {morning:{$exists: true}}}, (err, user) => {
   console.log(user);
     if (err) { return next(err); }
-    const message =  {
-      to: user.profile.phone,
-      from: '+14692082397',
-      body: 'Good Morning'
-    };
-    twilio.sendMessage(message, (err, responseData) => {
-      if (err) { return next(err.message); }
-      console.log('Morning push successful.');
-    });
+    numbers.push(user.profile.phone);
+  });
+  const message =  {
+    to: numbers[1],
+    from: '+14692082397',
+    body: 'Good Morning'
+  };
+  twilio.sendMessage(message, (err, responseData) => {
+    if (err) { return next(err.message); }
+    console.log('Morning push successful.');
   });
 };
 
