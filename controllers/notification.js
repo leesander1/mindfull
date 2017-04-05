@@ -12,6 +12,11 @@ exports.pushMorning = () => {
     console.log(user);
     if (err) { return next(err); }
     //numbers.push(user.profile.phone);
+    user.forEach(function(user) {
+      if (user.notification.morning == true){
+        console.log(user._id + " : " + user.notification.morning );
+      }
+    });
   });
   /**
   const message =  {
