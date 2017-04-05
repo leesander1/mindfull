@@ -1,4 +1,5 @@
 const moment = require('moment');
+const timezone = require('moment-timezone');
 const nodemailer = require('nodemailer');
 const async = require('async');
 const Entry = require('../models/Entry');
@@ -681,7 +682,7 @@ exports.entryFinish = (req, res) => {
 exports.postEntryFinish = (req, res, next) => {
   let start = moment().startOf('day'); // set to 12:00 am today
   let end = moment().endOf('day'); // set to 23:59 pm today
-  let today = moment().format("MMM Do YY");
+  let today = timezone().tz("America/Chicago").format("MMM Do YY");
   Entry.findOne({
     $and: [
          { email: req.body.email },
