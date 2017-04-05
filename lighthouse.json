@@ -1,22 +1,22 @@
 {
   "lighthouseVersion": "1.6.0",
-  "generatedTime": "2017-03-21T19:20:44.228Z",
-  "initialUrl": "http://localhost:3000/",
-  "url": "http://localhost:3000/",
+  "generatedTime": "2017-04-05T00:09:21.786Z",
+  "initialUrl": "https://fast-harbor-58566.herokuapp.com/",
+  "url": "https://fast-harbor-58566.herokuapp.com/",
   "audits": {
     "is-on-https": {
-      "score": false,
+      "score": true,
       "displayValue": "",
-      "rawValue": false,
+      "rawValue": true,
       "name": "is-on-https",
       "category": "Security",
       "description": "Uses HTTPS",
       "helpText": "All sites should be protected with HTTPS, even ones that don't handle sensitive data. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/https)."
     },
     "redirects-http": {
-      "score": false,
+      "score": true,
       "displayValue": "",
-      "rawValue": false,
+      "rawValue": true,
       "name": "redirects-http",
       "category": "Security",
       "description": "Redirects HTTP traffic to HTTPS",
@@ -32,9 +32,9 @@
       "helpText": "The service worker is the technology that enables your app to use many Progressive Web App features, such as offline, add to homescreen, and push notifications. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/registered-service-worker)."
     },
     "works-offline": {
-      "score": false,
+      "score": true,
       "displayValue": "",
-      "rawValue": false,
+      "rawValue": true,
       "name": "works-offline",
       "category": "Offline",
       "description": "Responds with a 200 when offline",
@@ -69,21 +69,21 @@
       "helpText": "Your app should display some content when JavaScript is disabled, even if it's just a warning to the user that JavaScript is required to use the app. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/no-js)."
     },
     "first-meaningful-paint": {
-      "score": 97,
-      "displayValue": "1472.7ms",
-      "rawValue": 1472.7,
+      "score": 96,
+      "displayValue": "1641.1ms",
+      "rawValue": 1641.1,
       "optimalValue": "1,600ms",
       "extendedInfo": {
         "value": {
           "timestamps": {
-            "navStart": 20883338596,
-            "fCP": 20884260475,
-            "fMP": 20884811331
+            "navStart": 159686342562,
+            "fCP": 159687407063,
+            "fMP": 159687983691
           },
           "timings": {
             "navStart": 0,
-            "fCP": 921.879,
-            "fMP": 1472.735
+            "fCP": 1064.501,
+            "fMP": 1641.129
           }
         },
         "formatter": "null"
@@ -94,60 +94,56 @@
       "helpText": "First meaningful paint measures when the primary content of a page is visible. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint)."
     },
     "speed-index-metric": {
-      "score": 99,
-      "displayValue": "1159",
-      "rawValue": 1159,
+      "score": 98,
+      "displayValue": "1254",
+      "rawValue": 1254,
       "optimalValue": "1,250",
       "extendedInfo": {
         "formatter": "speedline",
         "value": {
           "timings": {
-            "firstVisualChange": 964,
-            "visuallyComplete": 1896,
-            "speedIndex": 1059.5839599982648,
-            "perceptualSpeedIndex": 1159.3807368459616
+            "firstVisualChange": 1083,
+            "visuallyComplete": 2060,
+            "speedIndex": 1175.0218799883128,
+            "perceptualSpeedIndex": 1254.1865978531707
           },
           "timestamps": {
-            "firstVisualChange": 20884274037,
-            "visuallyComplete": 20885206037,
-            "speedIndex": 20884369620.96,
-            "perceptualSpeedIndex": 20884469417.736847
+            "firstVisualChange": 159687414448,
+            "visuallyComplete": 159688391448,
+            "speedIndex": 159687506469.88,
+            "perceptualSpeedIndex": 159687585634.59787
           },
           "frames": [
             {
-              "timestamp": 20883310.037,
+              "timestamp": 159686331.448,
               "progress": 3.447050086116485
             },
             {
-              "timestamp": 20884040.941,
+              "timestamp": 159686916.112,
               "progress": 0
             },
             {
-              "timestamp": 20884122.695,
+              "timestamp": 159686945.518,
               "progress": 0
             },
             {
-              "timestamp": 20884274.4,
+              "timestamp": 159687415.245,
               "progress": 56.0232631685021
             },
             {
-              "timestamp": 20884393.331,
-              "progress": 56.0232631685021
+              "timestamp": 159687800.686,
+              "progress": 99.79724161578513
             },
             {
-              "timestamp": 20884469.764,
-              "progress": 72.14648450850684
+              "timestamp": 159687997.81,
+              "progress": 99.79724161578513
             },
             {
-              "timestamp": 20884822.625,
-              "progress": 72.14648450850684
-            },
-            {
-              "timestamp": 20884859.991,
+              "timestamp": 159688019.189,
               "progress": 99.88136057127643
             },
             {
-              "timestamp": 20885206.492,
+              "timestamp": 159688391.907,
               "progress": 100
             }
           ]
@@ -179,11 +175,11 @@
           },
           {
             "percentile": 0.99,
-            "time": 32.382163333329274
+            "time": 24.612220000019956
           },
           {
             "percentile": 1,
-            "time": 47.31700000000092
+            "time": 30.41899999999896
           }
         ],
         "formatter": "null"
@@ -194,27 +190,27 @@
       "helpText": "The score above is an estimate of how long your app takes to respond to user input, in milliseconds. There is a 90% probability that a user encounters this amount of latency, or less. 10% of the time a user can expect additional latency. If your score is higher than Lighthouse's target score, users may perceive your app as laggy. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/estimated-input-latency)."
     },
     "time-to-interactive": {
-      "score": 98,
-      "displayValue": "1484ms",
-      "rawValue": 1484,
+      "score": 97,
+      "displayValue": "1655.2ms",
+      "rawValue": 1655.2,
       "optimalValue": "5,000ms",
       "extendedInfo": {
         "value": {
           "timings": {
-            "fMP": 1472.7,
-            "visuallyReady": 1484.029,
-            "timeToInteractive": 1484.029
+            "fMP": 1641.1,
+            "visuallyReady": 1655.248,
+            "timeToInteractive": 1655.248
           },
           "timestamps": {
-            "fMP": 20884811331,
-            "visuallyReady": 20884822625,
-            "timeToInteractive": 20884822625
+            "fMP": 159687983691,
+            "visuallyReady": 159687997810,
+            "timeToInteractive": 159687997810
           },
-          "expectedLatencyAtTTI": 18.517,
+          "expectedLatencyAtTTI": 16.077,
           "foundLatencies": [
             {
-              "estLatency": 18.51720000021757,
-              "startTime": "1484.0"
+              "estLatency": 16.07720833316446,
+              "startTime": "1655.2"
             }
           ]
         },
@@ -241,68 +237,58 @@
     },
     "critical-request-chains": {
       "score": false,
-      "displayValue": "5",
+      "displayValue": "4",
       "rawValue": false,
       "optimalValue": 0,
       "extendedInfo": {
         "formatter": "criticalRequestChains",
         "value": {
-          "12576.583": {
+          "11996.4003": {
             "request": {
-              "url": "http://localhost:3000/",
-              "startTime": 20883.35196,
-              "endTime": 20883.721301,
-              "responseReceivedTime": 20883.712989,
+              "url": "https://fast-harbor-58566.herokuapp.com/",
+              "startTime": 159686.347283,
+              "endTime": 159686.744637,
+              "responseReceivedTime": 159686.737349,
               "transferSize": 1708
             },
             "children": {
-              "12576.589": {
+              "11996.4007": {
                 "request": {
-                  "url": "http://localhost:3000/bower_components/material-design-icons/iconfont/material-icons.css",
-                  "startTime": 20883.759399,
-                  "endTime": 20883.956839,
-                  "responseReceivedTime": 20883.955747,
-                  "transferSize": 1347
+                  "url": "https://fast-harbor-58566.herokuapp.com/style.css",
+                  "startTime": 159686.752326,
+                  "endTime": 159686.9746,
+                  "responseReceivedTime": 159686.966073,
+                  "transferSize": 1729
                 },
                 "children": {}
               },
-              "12576.588": {
+              "11996.4004": {
                 "request": {
-                  "url": "http://localhost:3000/style.css",
-                  "startTime": 20883.758438,
-                  "endTime": 20883.986219,
-                  "responseReceivedTime": 20883.949617,
-                  "transferSize": 1586
+                  "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+                  "startTime": 159686.751281,
+                  "endTime": 159687.060345,
+                  "responseReceivedTime": 159687.059359,
+                  "transferSize": 645
                 },
                 "children": {}
               },
-              "12576.584": {
+              "11996.4005": {
                 "request": {
-                  "url": "http://localhost:3000/bower_components/webcomponentsjs/webcomponents-lite.min.js",
-                  "startTime": 20883.754854,
-                  "endTime": 20884.125526,
-                  "responseReceivedTime": 20883.920771,
-                  "transferSize": 12793
+                  "url": "https://code.getmdl.io/1.3.0/material.indigo-pink.min.css",
+                  "startTime": 159686.75171,
+                  "endTime": 159687.36896,
+                  "responseReceivedTime": 159687.195006,
+                  "transferSize": 21056
                 },
                 "children": {}
               },
-              "12576.586": {
+              "11996.4017": {
                 "request": {
-                  "url": "http://localhost:3000/bower_components/material-design-lite/material.min.css",
-                  "startTime": 20883.757045,
-                  "endTime": 20884.199701,
-                  "responseReceivedTime": 20883.935822,
-                  "transferSize": 20936
-                },
-                "children": {}
-              },
-              "12576.601": {
-                "request": {
-                  "url": "http://localhost:3000/images/3.jpg",
-                  "startTime": 20884.258009,
-                  "endTime": 20884.785285,
-                  "responseReceivedTime": 20884.420238,
-                  "transferSize": 72833
+                  "url": "https://fast-harbor-58566.herokuapp.com/images/3.jpg",
+                  "startTime": 159687.403893,
+                  "endTime": 159687.968485,
+                  "responseReceivedTime": 159687.574197,
+                  "transferSize": 72865
                 },
                 "children": {}
               }
@@ -330,7 +316,7 @@
       "displayValue": "",
       "rawValue": true,
       "extendedInfo": {
-        "value": "rgb(233,30,99)",
+        "value": "#90A4AE",
         "formatter": "null"
       },
       "name": "manifest-background-color",
@@ -402,7 +388,7 @@
     },
     "theme-color-meta": {
       "score": true,
-      "displayValue": "#FF4081",
+      "displayValue": "#90A4AE",
       "rawValue": true,
       "name": "theme-color-meta",
       "category": "HTML",
@@ -592,8 +578,8 @@
     },
     "total-byte-weight": {
       "score": 100,
-      "displayValue": "Total size was 213 KB",
-      "rawValue": 218416,
+      "displayValue": "Total size was 206 KB",
+      "rawValue": 210773,
       "optimalValue": "1,600 KB",
       "extendedInfo": {
         "formatter": "table",
@@ -601,43 +587,37 @@
           "results": [
             {
               "url": "…images/3.jpg",
-              "totalBytes": 72833,
+              "totalBytes": 72865,
               "totalKb": "71 KB",
               "totalMs": "350ms"
             },
             {
-              "url": "…webcomponentsjs/webcomponents.js",
-              "totalBytes": 48722,
-              "totalKb": "48 KB",
-              "totalMs": "240ms"
+              "url": "…1.3.0/material.min.js",
+              "totalBytes": 62782,
+              "totalKb": "61 KB",
+              "totalMs": "300ms"
             },
             {
-              "url": "…iconfont/MaterialIcons-Regular.woff2",
-              "totalBytes": 44656,
-              "totalKb": "44 KB",
-              "totalMs": "220ms"
+              "url": "…v21/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2",
+              "totalBytes": 47842,
+              "totalKb": "47 KB",
+              "totalMs": "230ms"
             },
             {
-              "url": "…material-design-lite/material.min.css",
-              "totalBytes": 20936,
-              "totalKb": "20 KB",
+              "url": "…1.3.0/material.indigo-pink.min.css",
+              "totalBytes": 21056,
+              "totalKb": "21 KB",
               "totalMs": "100ms"
             },
             {
-              "url": "…webcomponentsjs/webcomponents-lite.min.js",
-              "totalBytes": 12793,
-              "totalKb": "12 KB",
-              "totalMs": "60ms"
-            },
-            {
-              "url": "…material-design-lite/material.min.js",
-              "totalBytes": 12123,
-              "totalKb": "12 KB",
-              "totalMs": "60ms"
-            },
-            {
               "url": "…js/service-worker-registration.js",
-              "totalBytes": 1712,
+              "totalBytes": 1735,
+              "totalKb": "2 KB",
+              "totalMs": "10ms"
+            },
+            {
+              "url": "/style.css",
+              "totalBytes": 1729,
               "totalKb": "2 KB",
               "totalMs": "10ms"
             },
@@ -648,16 +628,16 @@
               "totalMs": "10ms"
             },
             {
-              "url": "/style.css",
-              "totalBytes": 1586,
-              "totalKb": "2 KB",
-              "totalMs": "10ms"
+              "url": "/icon?family=Material+Icons",
+              "totalBytes": 645,
+              "totalKb": "1 KB",
+              "totalMs": "0ms"
             },
             {
-              "url": "…iconfont/material-icons.css",
-              "totalBytes": 1347,
-              "totalKb": "1 KB",
-              "totalMs": "10ms"
+              "url": "…js/main.js",
+              "totalBytes": 411,
+              "totalKb": "0 KB",
+              "totalMs": "0ms"
             }
           ],
           "tableHeadings": {
@@ -682,28 +662,28 @@
         "value": {
           "results": [
             {
-              "url": "…material-design-lite/material.min.css",
-              "numUnused": 1276,
-              "wastedBytes": 20253,
-              "wastedPercent": 96.73995451099317,
-              "totalBytes": 20936,
+              "url": "…1.3.0/material.indigo-pink.min.css",
+              "numUnused": 1290,
+              "wastedBytes": 20361,
+              "wastedPercent": 96.7016491754123,
+              "totalBytes": 21056,
               "wastedKb": "20 KB",
               "wastedMs": "100ms",
-              "totalKb": "20 KB",
+              "totalKb": "21 KB",
               "totalMs": "100ms",
               "potentialSavings": "20 KB _97%_"
             },
             {
               "url": "/style.css",
-              "numUnused": 37,
-              "wastedBytes": 1304,
-              "wastedPercent": 82.22222222222221,
-              "totalBytes": 1586,
+              "numUnused": 46,
+              "wastedBytes": 1473,
+              "wastedPercent": 85.18518518518519,
+              "totalBytes": 1729,
               "wastedKb": "1 KB",
               "wastedMs": "10ms",
               "totalKb": "2 KB",
               "totalMs": "10ms",
-              "potentialSavings": "1 KB _82%_"
+              "potentialSavings": "1 KB _85%_"
             }
           ],
           "tableHeadings": {
@@ -731,7 +711,7 @@
             {
               "url": "…images/3.jpg",
               "preview": {
-                "url": "http://localhost:3000/images/3.jpg",
+                "url": "https://fast-harbor-58566.herokuapp.com/images/3.jpg",
                 "mimeType": "image/jpeg"
               },
               "totalBytes": 72481,
@@ -794,15 +774,15 @@
     },
     "dom-size": {
       "score": 100,
-      "displayValue": "57 nodes",
-      "rawValue": 57,
+      "displayValue": "54 nodes",
+      "rawValue": 54,
       "optimalValue": "1,500 nodes",
       "extendedInfo": {
         "formatter": "card",
         "value": [
           {
             "title": "Total DOM Nodes",
-            "value": "57",
+            "value": "54",
             "target": "< 1,500 nodes"
           },
           {
@@ -813,7 +793,7 @@
           },
           {
             "title": "Maximum Children",
-            "value": "29",
+            "value": "26",
             "snippet": "Element with most children:\nhead",
             "target": "< 60 nodes"
           }
@@ -838,11 +818,13 @@
       "helpText": "Open new tabs using `rel=\"noopener\"` to improve performance and prevent security vulnerabilities. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/noopener)."
     },
     "geolocation-on-start": {
-      "score": null,
+      "score": true,
       "displayValue": "",
-      "rawValue": null,
-      "error": true,
-      "debugString": "Audit error: Required GeolocationOnStart gatherer encountered an error: Unable to determine if the Geolocation permission was requested on page load because it was already granted. Try resetting the permission and running Lighthouse again.",
+      "rawValue": true,
+      "extendedInfo": {
+        "formatter": "urllist",
+        "value": []
+      },
       "name": "geolocation-on-start",
       "category": "UX",
       "description": "Avoids requesting the geolocation permission on page load",
@@ -850,26 +832,26 @@
     },
     "link-blocking-first-paint": {
       "score": false,
-      "displayValue": "3 resources delayed first paint by 103ms",
+      "displayValue": "3 resources delayed first paint by 89ms",
       "rawValue": false,
       "extendedInfo": {
         "formatter": "table",
         "value": {
           "results": [
             {
-              "url": "…material-design-lite/material.min.css",
+              "url": "/icon",
+              "totalKb": "0 KB",
+              "totalMs": "38ms"
+            },
+            {
+              "url": "…1.3.0/material.indigo-pink.min.css",
               "totalKb": "20 KB",
-              "totalMs": "103ms"
+              "totalMs": "89ms"
             },
             {
               "url": "/style.css",
               "totalKb": "2 KB",
-              "totalMs": "83ms"
-            },
-            {
-              "url": "…iconfont/material-icons.css",
-              "totalKb": "1 KB",
-              "totalMs": "45ms"
+              "totalMs": "85ms"
             }
           ],
           "tableHeadings": {
@@ -906,30 +888,13 @@
       "helpText": "Consider using `performance.mark()` and `performance.measure()` from the User Timing API instead. They provide high-precision timestamps, independent of the system clock, and are integrated in the Chrome DevTools Timeline. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/console-time)."
     },
     "no-datenow": {
-      "score": false,
+      "score": true,
       "displayValue": "",
-      "rawValue": false,
+      "rawValue": true,
       "extendedInfo": {
         "formatter": "table",
         "value": {
-          "results": [
-            {
-              "args": [],
-              "col": 6595,
-              "isEval": false,
-              "isExtension": false,
-              "line": 12,
-              "url": "http://localhost:3000/bower_components/webcomponentsjs/webcomponents-lite.min.js"
-            },
-            {
-              "args": [],
-              "col": 48,
-              "isEval": false,
-              "isExtension": false,
-              "line": 7166,
-              "url": "http://localhost:3000/bower_components/webcomponentsjs/webcomponents.js"
-            }
-          ],
+          "results": [],
           "tableHeadings": {
             "url": "URL",
             "lineCol": "Line/Col",
@@ -1021,19 +986,13 @@
       "helpText": "Users are mistrustful of or confused by sites that request to send notifications without context. Consider tying the request to user gestures instead. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/notifications-on-load)."
     },
     "script-blocking-first-paint": {
-      "score": false,
-      "displayValue": "1 resource delayed first paint by 90ms",
-      "rawValue": false,
+      "score": true,
+      "displayValue": "",
+      "rawValue": true,
       "extendedInfo": {
         "formatter": "table",
         "value": {
-          "results": [
-            {
-              "url": "…webcomponentsjs/webcomponents-lite.min.js",
-              "totalKb": "12 KB",
-              "totalMs": "90ms"
-            }
-          ],
+          "results": [],
           "tableHeadings": {
             "url": "URL",
             "totalKb": "Size (KB)",
@@ -1049,7 +1008,7 @@
     },
     "uses-http2": {
       "score": false,
-      "displayValue": "10 requests were not handled over h2",
+      "displayValue": "5 requests were not handled over h2",
       "rawValue": false,
       "extendedInfo": {
         "formatter": "table",
@@ -1057,43 +1016,23 @@
           "results": [
             {
               "protocol": "http/1.1",
-              "url": "http://localhost:3000/"
+              "url": "https://fast-harbor-58566.herokuapp.com/"
             },
             {
               "protocol": "http/1.1",
-              "url": "http://localhost:3000/bower_components/material-design-icons/iconfont/material-icons.css"
+              "url": "https://fast-harbor-58566.herokuapp.com/style.css"
             },
             {
               "protocol": "http/1.1",
-              "url": "http://localhost:3000/style.css"
+              "url": "https://fast-harbor-58566.herokuapp.com/js/main.js"
             },
             {
               "protocol": "http/1.1",
-              "url": "http://localhost:3000/bower_components/webcomponentsjs/webcomponents-lite.min.js"
+              "url": "https://fast-harbor-58566.herokuapp.com/js/service-worker-registration.js"
             },
             {
               "protocol": "http/1.1",
-              "url": "http://localhost:3000/bower_components/material-design-lite/material.min.css"
-            },
-            {
-              "protocol": "http/1.1",
-              "url": "http://localhost:3000/bower_components/webcomponentsjs/webcomponents.js"
-            },
-            {
-              "protocol": "http/1.1",
-              "url": "http://localhost:3000/js/service-worker-registration.js"
-            },
-            {
-              "protocol": "http/1.1",
-              "url": "http://localhost:3000/bower_components/material-design-lite/material.min.js"
-            },
-            {
-              "protocol": "http/1.1",
-              "url": "http://localhost:3000/images/3.jpg"
-            },
-            {
-              "protocol": "http/1.1",
-              "url": "http://localhost:3000/bower_components/material-design-icons/iconfont/MaterialIcons-Regular.woff2"
+              "url": "https://fast-harbor-58566.herokuapp.com/images/3.jpg"
             }
           ],
           "tableHeadings": {
@@ -1154,11 +1093,11 @@
       "name": "Progressive Web App",
       "description": "These audits validate the aspects of a Progressive Web App. They are a subset of the [PWA Checklist](https://developers.google.com/web/progressive-web-apps/checklist).",
       "scored": true,
-      "total": 0.8106249999999999,
+      "total": 0.9971875,
       "categorizable": true,
       "score": [
         {
-          "overall": 0.5,
+          "overall": 1,
           "name": "App can load on offline/flaky connections",
           "description": "Ensuring your web app can respond when the network connection is unavailable or flaky is critical to providing your users a good experience. This is achieved through use of a [Service Worker](https://developers.google.com/web/fundamentals/primers/service-worker/).",
           "subItems": [
@@ -1172,9 +1111,9 @@
               "helpText": "The service worker is the technology that enables your app to use many Progressive Web App features, such as offline, add to homescreen, and push notifications. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/registered-service-worker)."
             },
             {
-              "score": false,
+              "score": true,
               "displayValue": "",
-              "rawValue": false,
+              "rawValue": true,
               "name": "works-offline",
               "category": "Offline",
               "description": "Responds with a 200 when offline",
@@ -1183,26 +1122,26 @@
           ]
         },
         {
-          "overall": 0.985,
+          "overall": 0.9775,
           "name": "Page load performance is fast",
           "description": "Users notice if sites and apps don't perform well. These top-level metrics capture the most important perceived performance concerns.",
           "subItems": [
             {
-              "score": 97,
-              "displayValue": "1472.7ms",
-              "rawValue": 1472.7,
+              "score": 96,
+              "displayValue": "1641.1ms",
+              "rawValue": 1641.1,
               "optimalValue": "1,600ms",
               "extendedInfo": {
                 "value": {
                   "timestamps": {
-                    "navStart": 20883338596,
-                    "fCP": 20884260475,
-                    "fMP": 20884811331
+                    "navStart": 159686342562,
+                    "fCP": 159687407063,
+                    "fMP": 159687983691
                   },
                   "timings": {
                     "navStart": 0,
-                    "fCP": 921.879,
-                    "fMP": 1472.735
+                    "fCP": 1064.501,
+                    "fMP": 1641.129
                   }
                 },
                 "formatter": "null"
@@ -1213,60 +1152,56 @@
               "helpText": "First meaningful paint measures when the primary content of a page is visible. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint)."
             },
             {
-              "score": 99,
-              "displayValue": "1159",
-              "rawValue": 1159,
+              "score": 98,
+              "displayValue": "1254",
+              "rawValue": 1254,
               "optimalValue": "1,250",
               "extendedInfo": {
                 "formatter": "speedline",
                 "value": {
                   "timings": {
-                    "firstVisualChange": 964,
-                    "visuallyComplete": 1896,
-                    "speedIndex": 1059.5839599982648,
-                    "perceptualSpeedIndex": 1159.3807368459616
+                    "firstVisualChange": 1083,
+                    "visuallyComplete": 2060,
+                    "speedIndex": 1175.0218799883128,
+                    "perceptualSpeedIndex": 1254.1865978531707
                   },
                   "timestamps": {
-                    "firstVisualChange": 20884274037,
-                    "visuallyComplete": 20885206037,
-                    "speedIndex": 20884369620.96,
-                    "perceptualSpeedIndex": 20884469417.736847
+                    "firstVisualChange": 159687414448,
+                    "visuallyComplete": 159688391448,
+                    "speedIndex": 159687506469.88,
+                    "perceptualSpeedIndex": 159687585634.59787
                   },
                   "frames": [
                     {
-                      "timestamp": 20883310.037,
+                      "timestamp": 159686331.448,
                       "progress": 3.447050086116485
                     },
                     {
-                      "timestamp": 20884040.941,
+                      "timestamp": 159686916.112,
                       "progress": 0
                     },
                     {
-                      "timestamp": 20884122.695,
+                      "timestamp": 159686945.518,
                       "progress": 0
                     },
                     {
-                      "timestamp": 20884274.4,
+                      "timestamp": 159687415.245,
                       "progress": 56.0232631685021
                     },
                     {
-                      "timestamp": 20884393.331,
-                      "progress": 56.0232631685021
+                      "timestamp": 159687800.686,
+                      "progress": 99.79724161578513
                     },
                     {
-                      "timestamp": 20884469.764,
-                      "progress": 72.14648450850684
+                      "timestamp": 159687997.81,
+                      "progress": 99.79724161578513
                     },
                     {
-                      "timestamp": 20884822.625,
-                      "progress": 72.14648450850684
-                    },
-                    {
-                      "timestamp": 20884859.991,
+                      "timestamp": 159688019.189,
                       "progress": 99.88136057127643
                     },
                     {
-                      "timestamp": 20885206.492,
+                      "timestamp": 159688391.907,
                       "progress": 100
                     }
                   ]
@@ -1298,11 +1233,11 @@
                   },
                   {
                     "percentile": 0.99,
-                    "time": 32.382163333329274
+                    "time": 24.612220000019956
                   },
                   {
                     "percentile": 1,
-                    "time": 47.31700000000092
+                    "time": 30.41899999999896
                   }
                 ],
                 "formatter": "null"
@@ -1313,27 +1248,27 @@
               "helpText": "The score above is an estimate of how long your app takes to respond to user input, in milliseconds. There is a 90% probability that a user encounters this amount of latency, or less. 10% of the time a user can expect additional latency. If your score is higher than Lighthouse's target score, users may perceive your app as laggy. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/estimated-input-latency)."
             },
             {
-              "score": 98,
-              "displayValue": "1484ms",
-              "rawValue": 1484,
+              "score": 97,
+              "displayValue": "1655.2ms",
+              "rawValue": 1655.2,
               "optimalValue": "5,000ms",
               "extendedInfo": {
                 "value": {
                   "timings": {
-                    "fMP": 1472.7,
-                    "visuallyReady": 1484.029,
-                    "timeToInteractive": 1484.029
+                    "fMP": 1641.1,
+                    "visuallyReady": 1655.248,
+                    "timeToInteractive": 1655.248
                   },
                   "timestamps": {
-                    "fMP": 20884811331,
-                    "visuallyReady": 20884822625,
-                    "timeToInteractive": 20884822625
+                    "fMP": 159687983691,
+                    "visuallyReady": 159687997810,
+                    "timeToInteractive": 159687997810
                   },
-                  "expectedLatencyAtTTI": 18.517,
+                  "expectedLatencyAtTTI": 16.077,
                   "foundLatencies": [
                     {
-                      "estLatency": 18.51720000021757,
-                      "startTime": "1484.0"
+                      "estLatency": 16.07720833316446,
+                      "startTime": "1655.2"
                     }
                   ]
                 },
@@ -1363,23 +1298,23 @@
           ]
         },
         {
-          "overall": 0,
+          "overall": 1,
           "name": "Network connection is secure",
           "description": "Security is an important part of the web for both developers and users. Moving forward, Transport Layer Security (TLS) support will be required for many APIs.",
           "subItems": [
             {
-              "score": false,
+              "score": true,
               "displayValue": "",
-              "rawValue": false,
+              "rawValue": true,
               "name": "is-on-https",
               "category": "Security",
               "description": "Uses HTTPS",
               "helpText": "All sites should be protected with HTTPS, even ones that don't handle sensitive data. HTTPS prevents intruders from tampering with or passively listening in on the communications between your app and your users, and is a prerequisite for HTTP/2 and many new web platform APIs. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/https)."
             },
             {
-              "score": false,
+              "score": true,
               "displayValue": "",
-              "rawValue": false,
+              "rawValue": true,
               "name": "redirects-http",
               "category": "Security",
               "description": "Redirects HTTP traffic to HTTPS",
@@ -1466,7 +1401,7 @@
               "displayValue": "",
               "rawValue": true,
               "extendedInfo": {
-                "value": "rgb(233,30,99)",
+                "value": "#90A4AE",
                 "formatter": "null"
               },
               "name": "manifest-background-color",
@@ -1510,7 +1445,7 @@
             },
             {
               "score": true,
-              "displayValue": "#FF4081",
+              "displayValue": "#90A4AE",
               "rawValue": true,
               "name": "theme-color-meta",
               "category": "HTML",
@@ -1590,13 +1525,13 @@
           ]
         },
         {
-          "overall": 0,
+          "overall": 0.5,
           "name": "Using modern protocols",
           "subItems": [
             {
-              "score": false,
+              "score": true,
               "displayValue": "",
-              "rawValue": false,
+              "rawValue": true,
               "name": "is-on-https",
               "category": "Security",
               "description": "Uses HTTPS",
@@ -1604,7 +1539,7 @@
             },
             {
               "score": false,
-              "displayValue": "10 requests were not handled over h2",
+              "displayValue": "5 requests were not handled over h2",
               "rawValue": false,
               "extendedInfo": {
                 "formatter": "table",
@@ -1612,43 +1547,23 @@
                   "results": [
                     {
                       "protocol": "http/1.1",
-                      "url": "http://localhost:3000/"
+                      "url": "https://fast-harbor-58566.herokuapp.com/"
                     },
                     {
                       "protocol": "http/1.1",
-                      "url": "http://localhost:3000/bower_components/material-design-icons/iconfont/material-icons.css"
+                      "url": "https://fast-harbor-58566.herokuapp.com/style.css"
                     },
                     {
                       "protocol": "http/1.1",
-                      "url": "http://localhost:3000/style.css"
+                      "url": "https://fast-harbor-58566.herokuapp.com/js/main.js"
                     },
                     {
                       "protocol": "http/1.1",
-                      "url": "http://localhost:3000/bower_components/webcomponentsjs/webcomponents-lite.min.js"
+                      "url": "https://fast-harbor-58566.herokuapp.com/js/service-worker-registration.js"
                     },
                     {
                       "protocol": "http/1.1",
-                      "url": "http://localhost:3000/bower_components/material-design-lite/material.min.css"
-                    },
-                    {
-                      "protocol": "http/1.1",
-                      "url": "http://localhost:3000/bower_components/webcomponentsjs/webcomponents.js"
-                    },
-                    {
-                      "protocol": "http/1.1",
-                      "url": "http://localhost:3000/js/service-worker-registration.js"
-                    },
-                    {
-                      "protocol": "http/1.1",
-                      "url": "http://localhost:3000/bower_components/material-design-lite/material.min.js"
-                    },
-                    {
-                      "protocol": "http/1.1",
-                      "url": "http://localhost:3000/images/3.jpg"
-                    },
-                    {
-                      "protocol": "http/1.1",
-                      "url": "http://localhost:3000/bower_components/material-design-icons/iconfont/MaterialIcons-Regular.woff2"
+                      "url": "https://fast-harbor-58566.herokuapp.com/images/3.jpg"
                     }
                   ],
                   "tableHeadings": {
@@ -1740,7 +1655,7 @@
           ]
         },
         {
-          "overall": 0.75,
+          "overall": 1,
           "name": "Avoiding APIs that harm the user experience",
           "subItems": [
             {
@@ -1770,11 +1685,13 @@
               "helpText": "Open new tabs using `rel=\"noopener\"` to improve performance and prevent security vulnerabilities. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/noopener)."
             },
             {
-              "score": null,
+              "score": true,
               "displayValue": "",
-              "rawValue": null,
-              "error": true,
-              "debugString": "Audit error: Required GeolocationOnStart gatherer encountered an error: Unable to determine if the Geolocation permission was requested on page load because it was already granted. Try resetting the permission and running Lighthouse again.",
+              "rawValue": true,
+              "extendedInfo": {
+                "formatter": "urllist",
+                "value": []
+              },
               "name": "geolocation-on-start",
               "category": "UX",
               "description": "Avoids requesting the geolocation permission on page load",
@@ -2013,7 +1930,7 @@
       "categorizable": false,
       "score": [
         {
-          "overall": 0.5555555555555556,
+          "overall": 0.6666666666666666,
           "subItems": [
             {
               "score": false,
@@ -2024,28 +1941,28 @@
                 "value": {
                   "results": [
                     {
-                      "url": "…material-design-lite/material.min.css",
-                      "numUnused": 1276,
-                      "wastedBytes": 20253,
-                      "wastedPercent": 96.73995451099317,
-                      "totalBytes": 20936,
+                      "url": "…1.3.0/material.indigo-pink.min.css",
+                      "numUnused": 1290,
+                      "wastedBytes": 20361,
+                      "wastedPercent": 96.7016491754123,
+                      "totalBytes": 21056,
                       "wastedKb": "20 KB",
                       "wastedMs": "100ms",
-                      "totalKb": "20 KB",
+                      "totalKb": "21 KB",
                       "totalMs": "100ms",
                       "potentialSavings": "20 KB _97%_"
                     },
                     {
                       "url": "/style.css",
-                      "numUnused": 37,
-                      "wastedBytes": 1304,
-                      "wastedPercent": 82.22222222222221,
-                      "totalBytes": 1586,
+                      "numUnused": 46,
+                      "wastedBytes": 1473,
+                      "wastedPercent": 85.18518518518519,
+                      "totalBytes": 1729,
                       "wastedKb": "1 KB",
                       "wastedMs": "10ms",
                       "totalKb": "2 KB",
                       "totalMs": "10ms",
-                      "potentialSavings": "1 KB _82%_"
+                      "potentialSavings": "1 KB _85%_"
                     }
                   ],
                   "tableHeadings": {
@@ -2073,7 +1990,7 @@
                     {
                       "url": "…images/3.jpg",
                       "preview": {
-                        "url": "http://localhost:3000/images/3.jpg",
+                        "url": "https://fast-harbor-58566.herokuapp.com/images/3.jpg",
                         "mimeType": "image/jpeg"
                       },
                       "totalBytes": 72481,
@@ -2126,68 +2043,58 @@
             },
             {
               "score": false,
-              "displayValue": "5",
+              "displayValue": "4",
               "rawValue": false,
               "optimalValue": 0,
               "extendedInfo": {
                 "formatter": "criticalRequestChains",
                 "value": {
-                  "12576.583": {
+                  "11996.4003": {
                     "request": {
-                      "url": "http://localhost:3000/",
-                      "startTime": 20883.35196,
-                      "endTime": 20883.721301,
-                      "responseReceivedTime": 20883.712989,
+                      "url": "https://fast-harbor-58566.herokuapp.com/",
+                      "startTime": 159686.347283,
+                      "endTime": 159686.744637,
+                      "responseReceivedTime": 159686.737349,
                       "transferSize": 1708
                     },
                     "children": {
-                      "12576.589": {
+                      "11996.4007": {
                         "request": {
-                          "url": "http://localhost:3000/bower_components/material-design-icons/iconfont/material-icons.css",
-                          "startTime": 20883.759399,
-                          "endTime": 20883.956839,
-                          "responseReceivedTime": 20883.955747,
-                          "transferSize": 1347
+                          "url": "https://fast-harbor-58566.herokuapp.com/style.css",
+                          "startTime": 159686.752326,
+                          "endTime": 159686.9746,
+                          "responseReceivedTime": 159686.966073,
+                          "transferSize": 1729
                         },
                         "children": {}
                       },
-                      "12576.588": {
+                      "11996.4004": {
                         "request": {
-                          "url": "http://localhost:3000/style.css",
-                          "startTime": 20883.758438,
-                          "endTime": 20883.986219,
-                          "responseReceivedTime": 20883.949617,
-                          "transferSize": 1586
+                          "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+                          "startTime": 159686.751281,
+                          "endTime": 159687.060345,
+                          "responseReceivedTime": 159687.059359,
+                          "transferSize": 645
                         },
                         "children": {}
                       },
-                      "12576.584": {
+                      "11996.4005": {
                         "request": {
-                          "url": "http://localhost:3000/bower_components/webcomponentsjs/webcomponents-lite.min.js",
-                          "startTime": 20883.754854,
-                          "endTime": 20884.125526,
-                          "responseReceivedTime": 20883.920771,
-                          "transferSize": 12793
+                          "url": "https://code.getmdl.io/1.3.0/material.indigo-pink.min.css",
+                          "startTime": 159686.75171,
+                          "endTime": 159687.36896,
+                          "responseReceivedTime": 159687.195006,
+                          "transferSize": 21056
                         },
                         "children": {}
                       },
-                      "12576.586": {
+                      "11996.4017": {
                         "request": {
-                          "url": "http://localhost:3000/bower_components/material-design-lite/material.min.css",
-                          "startTime": 20883.757045,
-                          "endTime": 20884.199701,
-                          "responseReceivedTime": 20883.935822,
-                          "transferSize": 20936
-                        },
-                        "children": {}
-                      },
-                      "12576.601": {
-                        "request": {
-                          "url": "http://localhost:3000/images/3.jpg",
-                          "startTime": 20884.258009,
-                          "endTime": 20884.785285,
-                          "responseReceivedTime": 20884.420238,
-                          "transferSize": 72833
+                          "url": "https://fast-harbor-58566.herokuapp.com/images/3.jpg",
+                          "startTime": 159687.403893,
+                          "endTime": 159687.968485,
+                          "responseReceivedTime": 159687.574197,
+                          "transferSize": 72865
                         },
                         "children": {}
                       }
@@ -2203,26 +2110,26 @@
             },
             {
               "score": false,
-              "displayValue": "3 resources delayed first paint by 103ms",
+              "displayValue": "3 resources delayed first paint by 89ms",
               "rawValue": false,
               "extendedInfo": {
                 "formatter": "table",
                 "value": {
                   "results": [
                     {
-                      "url": "…material-design-lite/material.min.css",
+                      "url": "/icon",
+                      "totalKb": "0 KB",
+                      "totalMs": "38ms"
+                    },
+                    {
+                      "url": "…1.3.0/material.indigo-pink.min.css",
                       "totalKb": "20 KB",
-                      "totalMs": "103ms"
+                      "totalMs": "89ms"
                     },
                     {
                       "url": "/style.css",
                       "totalKb": "2 KB",
-                      "totalMs": "83ms"
-                    },
-                    {
-                      "url": "…iconfont/material-icons.css",
-                      "totalKb": "1 KB",
-                      "totalMs": "45ms"
+                      "totalMs": "85ms"
                     }
                   ],
                   "tableHeadings": {
@@ -2239,19 +2146,13 @@
               "helpText": "Link elements are blocking the first paint of your page. Consider inlining critical links and deferring non-critical ones. [Learn more](https://developers.google.com/web/tools/lighthouse/audits/blocking-resources)."
             },
             {
-              "score": false,
-              "displayValue": "1 resource delayed first paint by 90ms",
-              "rawValue": false,
+              "score": true,
+              "displayValue": "",
+              "rawValue": true,
               "extendedInfo": {
                 "formatter": "table",
                 "value": {
-                  "results": [
-                    {
-                      "url": "…webcomponentsjs/webcomponents-lite.min.js",
-                      "totalKb": "12 KB",
-                      "totalMs": "90ms"
-                    }
-                  ],
+                  "results": [],
                   "tableHeadings": {
                     "url": "URL",
                     "totalKb": "Size (KB)",
@@ -2267,8 +2168,8 @@
             },
             {
               "score": 100,
-              "displayValue": "Total size was 213 KB",
-              "rawValue": 218416,
+              "displayValue": "Total size was 206 KB",
+              "rawValue": 210773,
               "optimalValue": "1,600 KB",
               "extendedInfo": {
                 "formatter": "table",
@@ -2276,43 +2177,37 @@
                   "results": [
                     {
                       "url": "…images/3.jpg",
-                      "totalBytes": 72833,
+                      "totalBytes": 72865,
                       "totalKb": "71 KB",
                       "totalMs": "350ms"
                     },
                     {
-                      "url": "…webcomponentsjs/webcomponents.js",
-                      "totalBytes": 48722,
-                      "totalKb": "48 KB",
-                      "totalMs": "240ms"
+                      "url": "…1.3.0/material.min.js",
+                      "totalBytes": 62782,
+                      "totalKb": "61 KB",
+                      "totalMs": "300ms"
                     },
                     {
-                      "url": "…iconfont/MaterialIcons-Regular.woff2",
-                      "totalBytes": 44656,
-                      "totalKb": "44 KB",
-                      "totalMs": "220ms"
+                      "url": "…v21/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2",
+                      "totalBytes": 47842,
+                      "totalKb": "47 KB",
+                      "totalMs": "230ms"
                     },
                     {
-                      "url": "…material-design-lite/material.min.css",
-                      "totalBytes": 20936,
-                      "totalKb": "20 KB",
+                      "url": "…1.3.0/material.indigo-pink.min.css",
+                      "totalBytes": 21056,
+                      "totalKb": "21 KB",
                       "totalMs": "100ms"
                     },
                     {
-                      "url": "…webcomponentsjs/webcomponents-lite.min.js",
-                      "totalBytes": 12793,
-                      "totalKb": "12 KB",
-                      "totalMs": "60ms"
-                    },
-                    {
-                      "url": "…material-design-lite/material.min.js",
-                      "totalBytes": 12123,
-                      "totalKb": "12 KB",
-                      "totalMs": "60ms"
-                    },
-                    {
                       "url": "…js/service-worker-registration.js",
-                      "totalBytes": 1712,
+                      "totalBytes": 1735,
+                      "totalKb": "2 KB",
+                      "totalMs": "10ms"
+                    },
+                    {
+                      "url": "/style.css",
+                      "totalBytes": 1729,
                       "totalKb": "2 KB",
                       "totalMs": "10ms"
                     },
@@ -2323,16 +2218,16 @@
                       "totalMs": "10ms"
                     },
                     {
-                      "url": "/style.css",
-                      "totalBytes": 1586,
-                      "totalKb": "2 KB",
-                      "totalMs": "10ms"
+                      "url": "/icon?family=Material+Icons",
+                      "totalBytes": 645,
+                      "totalKb": "1 KB",
+                      "totalMs": "0ms"
                     },
                     {
-                      "url": "…iconfont/material-icons.css",
-                      "totalBytes": 1347,
-                      "totalKb": "1 KB",
-                      "totalMs": "10ms"
+                      "url": "…js/main.js",
+                      "totalBytes": 411,
+                      "totalKb": "0 KB",
+                      "totalMs": "0ms"
                     }
                   ],
                   "tableHeadings": {
@@ -2350,15 +2245,15 @@
             },
             {
               "score": 100,
-              "displayValue": "57 nodes",
-              "rawValue": 57,
+              "displayValue": "54 nodes",
+              "rawValue": 54,
               "optimalValue": "1,500 nodes",
               "extendedInfo": {
                 "formatter": "card",
                 "value": [
                   {
                     "title": "Total DOM Nodes",
-                    "value": "57",
+                    "value": "54",
                     "target": "< 1,500 nodes"
                   },
                   {
@@ -2369,7 +2264,7 @@
                   },
                   {
                     "title": "Maximum Children",
-                    "value": "29",
+                    "value": "26",
                     "snippet": "Element with most children:\nhead",
                     "target": "< 60 nodes"
                   }
@@ -2407,34 +2302,17 @@
       "categorizable": true,
       "score": [
         {
-          "overall": 0.5,
+          "overall": 1,
           "name": "New JavaScript features",
           "subItems": [
             {
-              "score": false,
+              "score": true,
               "displayValue": "",
-              "rawValue": false,
+              "rawValue": true,
               "extendedInfo": {
                 "formatter": "table",
                 "value": {
-                  "results": [
-                    {
-                      "args": [],
-                      "col": 6595,
-                      "isEval": false,
-                      "isExtension": false,
-                      "line": 12,
-                      "url": "http://localhost:3000/bower_components/webcomponentsjs/webcomponents-lite.min.js"
-                    },
-                    {
-                      "args": [],
-                      "col": 48,
-                      "isEval": false,
-                      "isExtension": false,
-                      "line": 7166,
-                      "url": "http://localhost:3000/bower_components/webcomponentsjs/webcomponents.js"
-                    }
-                  ],
+                  "results": [],
                   "tableHeadings": {
                     "url": "URL",
                     "lineCol": "Line/Col",

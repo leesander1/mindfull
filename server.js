@@ -21,6 +21,7 @@ const multer = require('multer');
 const exphbs = require("express-handlebars");
 const favicon = require('serve-favicon');
 const enforce = require('express-sslify');
+const cronJob = require('cron').CronJob;
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
@@ -188,5 +189,10 @@ app.listen(app.get('port'), () => {
   console.log('  Press CTRL-C to stop\n');
 });
 
+
+let textJob = new cronJob( '3 * * * *', function(){
+  notificationController.pushMorning();
+  console.log('textjob..');
+},  null, true);
 
 module.exports = app;

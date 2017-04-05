@@ -4,6 +4,15 @@ const passport = require('passport');
 const twilio = require('twilio')(process.env.TWILIO_SID, process.env.TWILIO_TOKEN);
 const User = require('../models/User');
 
+
+exports.pushMorning = () => {
+  console.log('test morning');
+};
+
+exports.pushEvening = () => {
+  console.log('test evening');
+};
+
 /**
  * GET /notification
  * Profile page.

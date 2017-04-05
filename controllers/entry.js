@@ -12,7 +12,7 @@ const replaceall = require("replaceall");
  * Entry page.
  */
 exports.newEntry = (req, res) => {
-  let date = moment().format("MMM Do YY");
+  let date = timezone().tz("America/Chicago").format("MMM Do YY");
   res.render('entry', {
     title: 'New Entry',
     layout: 'interactive',
