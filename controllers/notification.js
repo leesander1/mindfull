@@ -11,7 +11,7 @@ exports.pushMorning = () => {
   User.find({ notification: {morning:{$exists: true}}}, (err, user) => {
   console.log(user);
     if (err) { return next(err); }
-    numbers.push(user.profile.phone);
+    //numbers.push(user.profile.phone);
   });
   const message =  {
     to: numbers[1],
