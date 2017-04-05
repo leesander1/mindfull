@@ -14,9 +14,9 @@ exports.pushMorning = () => {
       if (user.notification.morning == true){
         let name = user.profile.name.first || user.profile.username.split(' ')[0] || 'user';
         const message =  {
-          to: name,
+          to: user.profile.phone || numbers[0],
           from: '+14692082397',
-          body: 'Good Morning ' + user.username + ', take your medicine and fill out entry at: \n'+
+          body: 'Good Morning ' + name + ', take your medicine and fill out entry at: \n'+
           'https://fast-harbor-58566.herokuapp.com/am'
         };
         twilio.sendMessage(message, (err, responseData) => {
@@ -29,7 +29,26 @@ exports.pushMorning = () => {
 };
 
 exports.pushEvening = () => {
-  console.log('test evening');
+  console.log('Evening push started...');
+  let numbers = ['4698773526'];
+  User.find({}, (err, user) => {
+    if (err) { return next(err); }
+    user.forEach(function(user) {
+      if (user.notification.evening == true){
+        let name = user.profile.name.first || user.profile.username.split(' ')[0] || 'user';
+        const message =  {
+          to: user.profile.phone || numbers[0],
+          from: '+14692082397',
+          body: 'Good Evening ' + name + ', take your medicine and fill out entry at: \n'+
+          'https://fast-harbor-58566.herokuapp.com/pm'
+        };
+        twilio.sendMessage(message, (err, responseData) => {
+          if (err) { return next(err.message); }
+          console.log('Evening push successful.');
+        });
+      }
+    });
+  });
 };
 
 /**
