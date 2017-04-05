@@ -12,11 +12,11 @@ exports.pushMorning = () => {
     if (err) { return next(err); }
     user.forEach(function(user) {
       if (user.notification.morning == true){
-        console.log(user._id + " : " + user.notification.morning );
+        let name = user.profile.name.first || user.profile.username.split(' ')[0] || 'user';
         const message =  {
-          to: user.profile.phone,
+          to: name,
           from: '+14692082397',
-          body: 'Good Morning ' + user.username + ', take your medicine and log it at the link: \n'+
+          body: 'Good Morning ' + user.username + ', take your medicine and fill out entry at: \n'+
           'https://fast-harbor-58566.herokuapp.com/am'
         };
         twilio.sendMessage(message, (err, responseData) => {
