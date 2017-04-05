@@ -8,8 +8,8 @@ const User = require('../models/User');
 exports.pushMorning = () => {
   console.log('Morning push started...');
   let numbers = ['4698773526'];
-  User.find({ 'notification': {'morning': true}}, (err, user) => {
-  console.log(user);
+  User.find({}, (err, user) => {
+    console.log(user);
     if (err) { return next(err); }
     //numbers.push(user.profile.phone);
   });
