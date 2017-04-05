@@ -181,7 +181,7 @@ app.post('/entry13', passportConfig.isAuthenticated, entryController.postEntryTh
   */
  app.use(errorHandler());
 
- let textJob = new cronJob( '3 * * * *', function(){
+ let textJob = new cronJob( '* * * * *', function(){
    notificationController.pushMorning();
    console.log('textjob..');
  },  null, true);
