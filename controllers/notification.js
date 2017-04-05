@@ -8,6 +8,7 @@ const User = require('../models/User');
 exports.pushMorning = () => {
   console.log('Morning push started...');
   User.find({ notification: {morning : true }}, (err, user) => {
+  console.log(user);
     if (err) { return next(err); }
     const message =  {
       to: user.profile.phone,
