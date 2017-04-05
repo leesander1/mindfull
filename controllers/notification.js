@@ -16,7 +16,7 @@ exports.pushMorning = () => {
         const message =  {
           to: user.profile.phone,
           from: '+14692082397',
-          body: 'Good Morning ' + user.name.first + ', take your medicine and log it at the link: \n'+
+          body: 'Good Morning ' + user.username + ', take your medicine and log it at the link: \n'+
           'https://fast-harbor-58566.herokuapp.com/am'
         };
         twilio.sendMessage(message, (err, responseData) => {
