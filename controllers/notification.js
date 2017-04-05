@@ -9,25 +9,23 @@ exports.pushMorning = () => {
   console.log('Morning push started...');
   let numbers = ['4698773526'];
   User.find({}, (err, user) => {
-    console.log(user);
     if (err) { return next(err); }
-    //numbers.push(user.profile.phone);
     user.forEach(function(user) {
       if (user.notification.morning == true){
         console.log(user._id + " : " + user.notification.morning );
+        const message =  {
+          to: user.profile.phone,
+          from: '+14692082397',
+          body: 'Good Morning ' + user.name.first + ', take your medicine and log it at the link: \n'+
+          'https://fast-harbor-58566.herokuapp.com/am'
+        };
+        twilio.sendMessage(message, (err, responseData) => {
+          if (err) { return next(err.message); }
+          console.log('Morning push successful.');
+        });
       }
     });
   });
-  /**
-  const message =  {
-    to: numbers[0],
-    from: '+14692082397',
-    body: 'Good Morning'
-  };
-  twilio.sendMessage(message, (err, responseData) => {
-    if (err) { return next(err.message); }
-    console.log('Morning push successful.');
-  }); */
 };
 
 exports.pushEvening = () => {
