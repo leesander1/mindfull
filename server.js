@@ -183,11 +183,11 @@ app.post('/entry13', passportConfig.isAuthenticated, entryController.postEntryTh
 
  new cronJob( '30 08 * * *', function(){
    notificationController.pushMorning();
- },  null, true,'America/Los_Angeles');
+ },  null, true,'America/Chicago');
 
  new cronJob( '30 20 * * *', function(){
    notificationController.pushEvening();
- },  null, true,'America/Los_Angeles');
+ },  null, true,'America/Chicago');
 
  /**
  * Start Express server.
