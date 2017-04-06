@@ -181,6 +181,12 @@ app.post('/entry13', passportConfig.isAuthenticated, entryController.postEntryTh
   */
  app.use(errorHandler());
 
+// On heroku use Heroku Scheduler for cron jobs since heroku sleeps
+
+new cronJob( '43 10 * * *', function(){
+  notificationController.pushMorning();
+},  null, true,'America/Chicago');
+
  new cronJob( '30 08 * * *', function(){
    notificationController.pushMorning();
  },  null, true,'America/Chicago');
@@ -188,6 +194,7 @@ app.post('/entry13', passportConfig.isAuthenticated, entryController.postEntryTh
  new cronJob( '30 20 * * *', function(){
    notificationController.pushEvening();
  },  null, true,'America/Chicago');
+
 
  /**
  * Start Express server.
