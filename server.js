@@ -181,10 +181,6 @@ app.post('/entry13', passportConfig.isAuthenticated, entryController.postEntryTh
   */
  app.use(errorHandler());
 
- new cronJob( '45 * * * * *', function(){
-   console.log('Keep Alive...');
- },  null, true,'America/Chicago');
-
  new cronJob( '30 08 * * *', function(){
    notificationController.pushMorning();
  },  null, true,'America/Chicago');
