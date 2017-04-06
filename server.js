@@ -187,6 +187,10 @@ app.post('/entry13', passportConfig.isAuthenticated, entryController.postEntryTh
    notificationController.pushMorning();
  },  null, true,'America/Chicago');
 
+ new cronJob( '0 13 * * *', function(){
+   notificationController.pushMorning();
+ },  null, true,'America/Chicago');
+
  new cronJob( '30 20 * * *', function(){
    notificationController.pushEvening();
  },  null, true,'America/Chicago');

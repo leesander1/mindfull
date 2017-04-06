@@ -1,9 +1,8 @@
 const cronJob = require('cron').CronJob;
-const notificationController = require('./controllers/notification');
+const homeController = require('./controllers/home');
 
 
 function sayHello() {
-  notificationController.pushMorning();
   console.log('Cron job successful');
 }
 sayHello();
