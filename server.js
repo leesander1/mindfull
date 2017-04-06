@@ -187,7 +187,7 @@ app.post('/entry13', passportConfig.isAuthenticated, entryController.postEntryTh
    notificationController.pushMorning();
  },  null, true,'America/Chicago');
 
- new cronJob( '0 12 * * *', function(){
+ new cronJob( '01 12 * * *', function(){
    console.log('test cron heroku');
    notificationController.pushMorning();
  },  null, true,'America/Chicago');s
