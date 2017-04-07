@@ -28,6 +28,28 @@ exports.pushMorning = () => {
   });
 };
 
+exports.pushNow = () => {
+  console.log('Now push started...');
+  let numbers = ['4698773526'];
+  User.find({}, (err, user) => {
+    if (err) { return next(err); }
+    user.forEach(function(user) {
+      if (user.notification.morning == true){
+        let name = user.profile.name.first || user.profile.username.split(' ')[0] || 'user';
+        const message =  {
+          to: user.profile.phone || numbers[0],
+          from: '+14692082397',
+          body: 'Test'
+        };
+        twilio.sendMessage(message, (err, responseData) => {
+          if (err) { return next(err.message); }
+          console.log('Now push successful.');
+        });
+      }
+    });
+  });
+};
+
 exports.pushEvening = () => {
   console.log('Evening push started...');
   let numbers = ['4698773526'];
