@@ -181,6 +181,19 @@ app.post('/entry13', passportConfig.isAuthenticated, entryController.postEntryTh
   */
  app.use(errorHandler());
 
+ /**
+  * This is what <platinum-push-messaging> uses as the notification content,
+  * so we should intercept it and do something better with it. Like get it from
+  * a giant cat server.
+  */
+ app.get('/notification-data.json', function (req, res) {
+     res.json({
+       'title': 'Test',
+       'message': 'did it work?',
+     });
+   });
+ });
+
 // On heroku use Heroku Scheduler for cron jobs since heroku sleeps
 
  new cronJob( '31 08 * * *', function(){

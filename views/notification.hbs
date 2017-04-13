@@ -1,9 +1,6 @@
 <script defer ="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 <link defer rel="import" href="bower_components/platinum-push-messaging/platinum-push-messaging.html">
-<platinum-push-messaging
-  title="You received a push message!"
-  message="Crazy!">
-</platinum-push-messaging>
+<platinum-push-messaging message-url="notification-data.json"></platinum-push-messaging>
 <div class="mdl-cell mdl-grid.center-items vert-div">
   <form method="POST" class="account-form" action="/notification/update">
     <input type="hidden" name="email" value="{{{user.email}}}"/>
