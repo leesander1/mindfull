@@ -5,7 +5,15 @@
   <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="enable-push">
       <input type="checkbox" id="enable-push" toggles value="true" name="enable-push" class="mdl-switch__input" unchecked>
     <span class="mdl-switch__label">Push Notifications</span>
-  </label><br/>
+  </label>
+<div>
+  <div>
+    <span id="registration-id"></span>
+      <pre class="paper-font-code1" style="overflow: auto; margin: 5px;" id="subscription"></pre>
+  </div>
+  <div id="send-instructions">
+  </div>
+</div>
 </div>
 <script>
   document.addEventListener('WebComponentsReady', function() {
