@@ -24,7 +24,7 @@
     </div>
     <div class="card">
       <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="enable-push">
-          <input type="checkbox" id="enable-push"  value="true" name="enable-push" class="mdl-switch__input" unchecked>
+          <input type="checkbox" id="enable-push" toggles value="true" name="enable-push" class="mdl-switch__input" unchecked>
         <span class="mdl-switch__label">Push Notifications</span>
       </label><br/>
     </div>
@@ -74,11 +74,12 @@
   if (!ppm.supported) {
     document.getElementById('supported').style.display = 'none';
     document.getElementById('unsupported').style.display = '';
+    console.log('Push not supported');
   }
   toggle.addEventListener('change', function() {
     if (toggle.checked) {
       ppm.enable();
-      console.log('bla');
+      console.log(ppm);
     } else {
       ppm.disable();
     }
