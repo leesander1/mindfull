@@ -63,7 +63,8 @@
 </div>
 
 <script>
-document.addEventListener('WebComponentsReady', function() {
+(function() {
+  document.addEventListener('WebComponentsReady', function() {
   var ppm = document.querySelector('platinum-push-messaging');
   var toggle = document.getElementById('enable-push');
   var subscription = document.getElementById('subscription');
@@ -97,4 +98,5 @@ document.addEventListener('WebComponentsReady', function() {
     sendInstructions.style.display = ppm.enabled ? '' : 'none';
   });
 });
+}());
 </script>
