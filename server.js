@@ -191,7 +191,6 @@ app.post('/entry13', passportConfig.isAuthenticated, entryController.postEntryTh
        'title': 'Test',
        'message': 'did it work?',
      });
-   });
  });
 
 // On heroku use Heroku Scheduler for cron jobs since heroku sleeps
