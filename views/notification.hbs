@@ -70,6 +70,7 @@
   toggle.addEventListener('change', function() {
     if (toggle.checked) {
       ppm.enable();
+      ppm.testPush();
       console.log("enabled");
     } else {
       ppm.disable();
