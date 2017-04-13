@@ -78,7 +78,7 @@
   toggle.addEventListener('change', function() {
     if (toggle.checked) {
       ppm.enable();
-      console.log(ppm.subscription);
+      console.log("enabled");
     } else {
       ppm.disable();
     }
@@ -93,6 +93,7 @@
     }
     subscription.textContent = JSON.stringify(ppm.subscription || undefined, null, 2);
     registrationId.textContent = subscriptionId ? subscriptionId : '';
+    console.log(subscriptionId);
   });
   ppm.addEventListener('enabled-changed', function(event) {
     toggle.checked = ppm.enabled;
