@@ -183,8 +183,7 @@ app.post('/entry13', passportConfig.isAuthenticated, entryController.postEntryTh
 
  /**
   * This is what <platinum-push-messaging> uses as the notification content,
-  * so we should intercept it and do something better with it. Like get it from
-  * a giant cat server.
+  * so intercept it and do something
   */
  app.get('/notification-data.json', function (req, res) {
      res.json({
