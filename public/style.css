@@ -8,6 +8,13 @@
 .heart {
   font-size: 12px;
 }
+.visible {
+    visibility: visible
+}
+
+.hidden {
+    visibility: hidden
+}
 .layout-transparent {
   /*background: url('') center / cover;*/
 }
