@@ -28,6 +28,16 @@
         <span class="mdl-switch__label">Push Notifications</span>
       </label><br/>
     </div>
+    <paper-item>
+          <paper-item-body two-line class="layout vertical">
+            <div>
+              Current subscription
+            </div>
+            <div>
+              <span id="registration-id"></span>
+              <pre class="paper-font-code1" style="overflow: auto; margin: 5px;" id="subscription"></pre>
+            </div>
+    </paper-item-body>
     <h5>Contact to Notify</h5>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <input class="mdl-textfield__input" value="{{{user.contact.name}}}" type="text" name="name" id="name">
